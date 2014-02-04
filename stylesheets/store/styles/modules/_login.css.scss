@@ -1,0 +1,81 @@
+// -------------------------------------
+//
+//   Login Module -
+//   Styles for the Login Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.login-container {
+	h6 {
+		color: $lightgrey;
+		font-family: $Trocchi;
+		font-size: 14px;
+		margin-bottom: 25px;
+		text-transform: none;
+	}
+	input[type="email"], input[type="password"] {
+		width: 100%;
+	}
+	.remember-me {
+		margin-bottom: 20px;
+	}
+	.button {
+		margin-bottom: 30px;
+	}
+}
+.dropdown-login {
+	@include border-top-left-radius(3px);
+	@include border-bottom-right-radius(3px);
+	@include border-bottom-left-radius(3px);
+	a {
+		font-size: 12px;
+	}
+	label.hint {
+		cursor: pointer;
+		font-size: 14px;
+		line-height: 37px;
+
+		&:hover {
+			color: $lightgrey;
+		}
+	}
+}
+.login-links {
+	a {
+		line-height: 40px;
+		text-decoration: underline;
+	}
+}
+#guest_checkout {
+	h6 {
+		color: $lightgrey;
+		font-family: $Trocchi;
+		font-size: 14px;
+		margin-bottom: 25px;
+		text-transform: none;
+	}
+	a {
+		display: block;
+		margin-bottom: 20px;
+	}
+	input[type="email"] {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.button {
+		margin-bottom: 20px;
+	}
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------

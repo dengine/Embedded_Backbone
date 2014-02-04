@@ -1,0 +1,14 @@
+<div class="bg-purple fade-out-start">
+	<div class="container fitfinder-page fitfinder-page-intro bg-fitfinder l-vert-pad">
+		<%= image_tag('fitfinder-wood.png', :class => "img-wood") %>
+		<%= image_tag('fitfinder-fittingroom.png', :class => "img-fittingroom") %>
+		<%= image_tag('fitfinder-girls.png', :class => "img-girls") %>
+		<div class="text">
+			<p>When it comes to shopping for bras, fit comes first. The size you've been wearing isn't necessarily right. After you take our virtual bra fitting test, we'll be able to show you the bras that are best for you!</p>
+			<a class="button image fit-me">Fit Me</a>
+			<% unless spree_current_user.present? %>
+				<p>Already been fitted? <a href="#" class="dialog-link" data-dialog="#sign-in-dialog">Sign In</a>
+			<% end %>
+		</div>
+	</div>
+</div>

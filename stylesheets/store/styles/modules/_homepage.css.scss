@@ -1,0 +1,439 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Example Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+// body{
+// 	background: image-url('bg-welcome.png') repeat-x, image-url('bg-texture.png');
+// }
+.homepage{
+	background: image-url('bg-welcome.png');
+	margin-top: -1px;
+	padding-top:60px;
+}
+.welcome-to-shop{
+	padding-left: 35px;
+	//height:810px;
+	//background: image-url('welcome-to-our-shop.png') no-repeat;
+}
+#featured-video{
+	position:absolute;
+	top:56.5%;
+	left:24%;
+	width:44%;
+}
+.feature-video-overlay{
+	width:100%;
+	pointer-events:none;
+	z-index:10;
+	position:relative;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.bra-problems{
+	width:100%;
+	height:653px;
+	margin-top:50px;
+	margin-bottom:0px;
+}
+.bra-model-wrap{
+	position: relative;
+	width: 600px;
+	height: 100%;
+	margin-left: 29%;
+}
+.bra-model-wrap .back{
+	display:none;
+}
+.bra-problems-what{
+	width:288px;
+	height:341px;
+	background: image-url('bra-problems-what.png') no-repeat;
+	display:block;
+	position:absolute;
+}
+.bra-problems .bra-model-wrap .hover-spot{
+	background: image-url('bra-problems-hoverspot.png') no-repeat;
+	cursor: pointer;
+	position:absolute;
+	width:29px;
+	height:29px;
+	display:block;
+	z-index:3;
+	&:hover {
+		opacity: .8;
+		cursor:pointer;
+	}
+}
+.bra-problems .bra-model-wrap #hover1{
+	left: 74px;
+	top: 282px;
+}
+.bra-problems .bra-model-wrap #hover2{
+	left: 99px;
+	top: 337px;
+}
+.bra-problems .bra-model-wrap #hover3{
+	left: 163px;
+	top: 392px;
+}
+.bra-problems .bra-model-wrap #hover4{
+	left: 253px;
+	top: 416px;
+}
+.bra-problems .bra-model-wrap #hover5{
+	top: 392px;
+	left: 114px;
+}
+.bra-problems .bra-model-wrap #hover6{
+	left: 163px;
+	top: 416px;
+}
+
+.bra-problems .bra-model{
+	width: 325px;
+	height: 551px;
+	background: url(/assets/bra-model.png);
+	position: absolute;
+	bottom: 0px;
+	z-index: 3;
+}
+.bra-problems .bra-model-wrap .close-up{
+	width:189px;
+	height:189px;
+	position:absolute;
+	top: 235px;
+	left: 217px;
+	z-index: 4;
+}
+.bra-problems .bra-model-wrap #close-up1{
+	background: url(/assets/bra-problems/strap.png);
+}
+.bra-problems .bra-model-wrap #close-up2{
+	background: url(/assets/bra-problems/cups.png);
+}
+.bra-problems .bra-model-wrap #close-up3{
+	background: url(/assets/bra-problems/gore.png);
+}
+.bra-problems .bra-model-wrap #close-up4{
+	background: url(/assets/bra-problems/underwire.png);
+}
+.bra-problems .bra-model-wrap #close-up5{
+	background: url(/assets/bra-problems/clasp.png);
+}
+.bra-problems .bra-model-wrap #close-up6{
+	background: url(/assets/bra-problems/parallel-band.png);
+}
+.bra-problems .bra-model.model-back{
+	background-position: -325px 0;
+}
+
+
+.bra-problems #view-control{
+	font-family: 'Trocchi', serif;
+	color:#808080;
+	font-size:14px;
+	width:258px;
+	position: absolute;
+	top: 364px;
+	left: 27px;
+	line-height: 20px;
+	z-index:5;
+
+}
+.bra-problems #change-view{
+	width:172px;
+	height:93px;
+	display:block;
+	cursor: pointer;
+	background: image-url('view-control.png');
+	background-position-x:0px;
+	&:hover{
+		opacity:0.7;
+	}
+}
+
+.bra-problems #change-view.clicked{
+	background-position-x: -178px;
+}
+.bra-problems .info-container {
+	background: url(/assets/bra-problems-info-bg.png) no-repeat;
+	width: 365px;
+	height: 363px;
+	position: absolute;
+	left: 301px;
+	top: 175px;
+	line-height: 20px;
+	text-align: center;
+	padding: 80px 22px;
+	z-index: 1;
+}
+.bra-problems .info{
+	display:none;
+}
+.bra-problems .focus{
+	display:block;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.bra-problems .info h2{
+	color:#5c384c
+}
+.bra-problems .info p{
+	font-family:"din-condensed-web",sans-serif;
+	color:#fff;
+	font-size: 19px;
+	line-height:1.2em;
+}
+.plan-a-visit-homepage{
+	background: image-url('plan-a-visit-wood.png') center top no-repeat;
+	width:100%;
+	background-size: cover;
+}
+
+.plan-a-visit-homepage .frame, .plan-a-visit-homepage .frame-mobile{
+	width:100%;
+	//background: image-url('plan-a-visit-frame.png') no-repeat;
+	//position: relative;
+	//background-size:100%;
+}
+.plan-a-visit-homepage .frame-mobile{
+	display:none;
+}
+
+.plan-a-visit-homepage .frame-content{
+	position: absolute;
+	top: 45%;
+	left: 21%;
+	font-family: 'Trocchi', serif;
+	width: 19%;
+	font-size: 13px;
+	color: #7c7575;
+}
+.plan-a-visit-homepage .frame-content .visit-us-btn{
+	width:138px;
+	height:79px;
+	background: image-url('btn-visit-us.png');
+	display:block;
+}
+.plan-a-visit-homepage .frame-content .visit-us-btn:hover{
+	background-position-y:-79px;
+}
+.bra-types .bra-type{
+	text-align: center;
+	margin:0 0 25px 10px;
+
+}
+.bra-types .bra-type a{
+	color:#f35181;
+	background-size:200%;
+}
+.bra-types .bra-type a:first-child{
+	width:270px;
+	height:163px;
+	display:block;
+	margin:0 auto 15px auto;
+}
+
+.bra-types .bra-type a:nth-child(2){
+	font-size: 20px;
+	font-family: "din-condensed-web",sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-top:10px;
+}
+
+.metal-plate img{
+	width:100%;	
+}
+.bra-type-title{
+	background: image-url('metal-plate-link.png') repeat-x center;
+}
+.bra-types .everyday{
+	background: image-url('types-of-bra/everyday-comb.png') left;
+}
+.bra-types .fashion{
+	background: image-url('types-of-bra/fashion-comb.png') left;
+}
+.bra-types .nursing{
+	background: image-url('types-of-bra/nursing-comb.png') left;
+}
+.bra-types .strapless{
+	background: image-url('types-of-bra/strapless-comb.png') left;
+}
+.bra-types .sports{
+	background: image-url('types-of-bra/sports-comb.png') left;
+}
+.bra-types .masect{
+	background: image-url('types-of-bra/masect.png') left;
+}
+
+.featuring{
+	background: image-url('featuring-bg-homepage.png') repeat-x center;
+	margin-top:100px;
+	background-size: 86%;
+}
+.featuring-text{
+
+	position:absolute;
+	z-index:999;
+	text-transform: uppercase;
+	width: 645px;
+	left: 158px;
+	top: 141px;
+	text-align: center;
+}
+.featuring-subtitle{
+	font-family:$Din;
+	font-size: 38px;
+	color: $green;
+	margin-bottom: -5px;
+	margin-top: 18px;
+	font-weight:normal;
+}
+.featuring-title{
+	font-family:$Din;
+	font-size: 122px;
+	color:$black;
+}
+#feature-video{
+	width:960px;
+	margin:0 auto;
+}
+
+
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+@media only screen and (max-width: 959px) {
+	.welcome-to-shop{
+		padding: 0;
+	}
+	.bra-problems{
+		height:874px;
+	}
+	.bra-problems-what{
+		left:123px;
+	}
+	.bra-problems #view-control{
+		top:143px;
+		left:451px;
+	}
+	.bra-model-wrap{
+		margin-left:8%;
+	}
+	.bra-model-wrap .hover-spots{
+		position:absolute;
+		top:219px;
+	}
+	.bra-model-wrap .info-container{
+		position:absolute;
+		top:402px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.bra-types .bra-type a:first-child {
+		width:100%;
+		background-size:200%;
+		height:143px;
+	}
+	.bra-types .bra-type a:first-child:hover{
+		background-position: 236px;
+	}
+	.featuring-text{
+		width: 516px;
+		left: 126px;
+		top: 114px;
+	}
+	.featuring-title{
+		font-size: 100px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.bra-problems{
+		display:none;
+	}
+	.frame{
+		display:none;
+	}
+
+.plan-a-visit-homepage .frame-mobile{
+		display:block;
+	}
+	.frame-content{
+		display:none;
+	}
+	.featuring{
+		margin:0px;
+		padding: 30px 0;
+		.container{
+			width:100%;
+		}
+	}
+	.homepage .container{
+		width:100%;
+	}
+	.featuring-text{
+		width: 68%;
+		left: 16%;
+		top: 18%;
+	}
+	.featuring-subtitle{
+		margin-top: 10px;
+		font-size: 31px;
+	}
+	.featuring-title{
+		font-size: 63px;
+		text-align: center;
+	}
+
+
+}
+@media only screen and (max-width: 479px) {
+	.homepage .container{
+		width:300px;
+	}
+	.featuring #featured-video{
+			top:53.5%;
+		
+	}
+	.featuring-subtitle{
+		margin-top: 10px;
+		font-size: 16px;
+	}
+	.featuring-title{
+		font-size: 44px;
+		text-align: center;
+	}
+}

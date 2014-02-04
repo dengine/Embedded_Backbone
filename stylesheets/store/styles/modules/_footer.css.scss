@@ -1,0 +1,45 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Footer Module
+//
+// -------------------------------------
+	#footer {
+		background: #313131;
+		font-family: $Din;
+		height:50px;
+		padding: 12px 0 0 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	#footer-left{
+		display:none;
+	}
+	#footer li{
+		list-style-type: none;
+		display: inline;
+		font-size: 17px;
+		text-transform: uppercase;
+		margin: 0 5px;
+	}
+	#footer a {
+		color:$white;
+		&:hover{
+			color:$pink;
+		}
+	}
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------

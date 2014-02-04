@@ -1,0 +1,349 @@
+var StepView = (function(){
+
+	var StepView = Backbone.View.extend({
+		tagName: 'div',
+		className: 'step',
+		firstLoad: false,
+		events: {
+			'click .adjust-band': 'adjustBand',
+			'click .adjust-cup': 'adjustCup',
+			'submit .step-form': 'stepNext',
+			'click .step-back': 'stepBack',
+			'submit .form-complete': 'formComplete',
+			'submit .bra-size': 'braUpdate',
+			'click .radio-label':'radioSelect',
+			'click .bra-dial-button': 'braButtonClick'
+		},
+		braUpdate: function(event){
+			event.preventDefault();
+			//Get all of the radio buttons currently checked
+			var choices = $("input[type='radio']:checked");
+			var userBand,
+				userCup;
+
+			//Take both choices and save out their values
+			$(choices).each(function(){
+
+				if($(this).data('band')){
+					userBand = $(this).data('band');
+				}
+				if($(this).data('cup')){
+					userCup = $(this).data('cup');
+				}
+			});
+
+			//Update our model to reflect user choices
+	
+			// The following commented lines were added so that users who entered the same
+			// size for both band and measurement would get an updated band size
+			// Livirae no longer wants this, measurement is the grail
+			
+			// var oldBand = this.model.get('band');
+			// if(oldBand == userBand){
+			// 	this.model.set({bandOk: false});
+			// } else {
+			// 	this.model.set({bandOk: true});
+			// }
+			this.model.set({bandOk: true});
+			if(userCup){
+				this.model.set({band: userBand, cup: userCup});
+				this.model.answerStrings[this.step_id] = userBand+userCup;
+			} else {
+				this.model.set({band: userBand});
+				this.model.answerStrings[this.step_id] = userBand;
+			}
+
+
+			//Navigate to next step  
+			Fitfinder.router.navigate('/step/'+(Number(this.step_id)+1), {trigger: true});	
+
+		},
+		checkOptions: function(){
+
+			//Check the non-numerical option values in the last two questions, step 6 && 7
+			var option1 = this.model.options[6];
+			var option2 = this.model.options[7];
+
+			//Set some init variables
+			var bandsize = 0;
+			var cupsize = 0;
+
+
+			//Use this switch statement to process possible options and return the adjustment
+			switch(option1+"|"+option2){
+				case "A|A":
+				case "B|A": 
+						bandsize = 0;
+						cupsize = 0;
+					break;
+				case "A|B":
+				case "B|B":
+						bandsize = 0;
+						cupsize = 0;
+					break;
+				case "A|C":
+				case "B|C":
+						bandsize = 0;
+						cupsize = 0;
+					break;
+				case "C|A":
+						bandsize = 0;
+						cupsize = 0;
+					break;
+				case "C|B":
+						bandsize = 0;
+						cupsize = 0;
+					break;
+				case "C|C":
+						bandsize = 0;
+						cupsize = 0;
+					break;
+				default:
+					bandsize = 0;
+					cupsize = 0;
+					break;			
+			}
+
+			return {
+				bandsize: bandsize,
+				cupsize: cupsize
+			}
+
+		},
+		initialize: function(){
+			//I should really be doing stuff here I think
+		},
+		radioSelect: function(event){
+			//This is the handler for when a user clicks a "radio" button, in this case we look for a div click, then trigger a hidden radio button (IE8 SUCKS)			
+			//Get our event target
+			var radioLabel = event.target;
+			
+			//Remove selected class from all buttons
+			$('.radio-label').removeClass('radio-label-selected');
+
+			//Add selected class to our event target
+			$(radioLabel).addClass('radio-label-selected');
+
+			//Check the data-radio attr of our target, and trigger the corresponding radio button
+			var radioButton = $(radioLabel).data('button');
+
+			//Click that bitch
+			$('#'+radioButton).click();
+		},
+		radioChange: function(event){
+
+			//This is the handler for radio button change events
+
+			//Find the radio button that become selected
+			var radioBtn = event.target;
+
+			//Get the radio button's corresponding image from data-image
+			var modelImg = $(radioBtn).data('img');
+
+			//Hide the other images (if they aren't already), then show the next one
+			$('.model-img').not('.model-img-'+modelImg).stop().transition({"opacity":0,duration: 800});
+			$('.model-img-'+modelImg).stop().transition({"opacity":1, duration: 800});	
+
+			//For bra select
+			if($(radioBtn).parents('.bands-list').length>0){
+				this.braDialScroll($(radioBtn).data('band'), $('.bra-dial-sizes-bands'));
+			}
+			if($(radioBtn).parents('.cups-list').length>0){
+				this.braDialScroll($(radioBtn).data('cup'), $('.bra-dial-sizes-cups'));
+			}
+		},
+		braDialScroll: function(targetValue, targetDial){
+			if(this.firstLoad == true){
+				var time = 0;
+				this.firstLoad = false;
+			} else {
+				var time  = 400;
+			}
+
+			var $listItem = this.$el.find('[data-value="'+targetValue+'"]');
+			var liPos = $listItem.position();
+			$(targetDial).stop().transition({"top":-liPos.top, duration: time})
+		},
+		braButtonClick: function(event){
+
+
+			if($(event.target).parent().hasClass('bra-dial-bands')){
+				var type = 'band'
+			} else {
+				var type = 'cup'
+			}
+
+			var $initVal = $('.'+type+'s-list input[type=radio]:checked');
+		
+			if($(event.target).hasClass("bra-dial-button-minus")){
+				this.$el.find($initVal).next().click();
+			} else {
+				this.$el.find($initVal).prev().click();
+			}
+		},
+		render: function(step_id){
+			//Save out what step this is to our view
+			this.step_id = step_id;
+			var that = this;
+
+			//Get our template and put it in handlebars, each template has an #id of step_ + step_id (kinda ugly)
+			var template = Handlebars.compile($("#step_"+step_id).html())
+
+			//Pass in our view data into the template
+			var cupsL = that.model.cups.length-1;
+			var bandsL = that.model.bands.length-1;
+			var bandsArray = that.model.bands.slice(0);
+			var cupsArray = that.model.cups.slice(0);
+			var rendered = template({cups: cupsArray.reverse(), bands: bandsArray.reverse(), cupsL: cupsL, bandsL: bandsL});
+
+			//Add the template to the DOM
+			this.$el.append(rendered);
+
+			_.defer(function(){
+				that.afterRender()
+			});
+
+			this.$el.find('input[type=radio]').on('change', function(event){
+				that.radioChange(event);
+			});
+			
+		},
+		afterRender: function(){
+
+			//Here is where we do our history check, if the array index 
+			//of the step is defined (user has been on this step before), 
+			//then we set the corresponding radio button as clicked, THIS IS A MESS
+			var that = this;
+			if(this.model.cupsMath[this.step_id-3] != undefined){
+				var cupsVal = this.model.cupsMath[this.step_id-3]
+				var bandsVal = this.model.bandsMath[this.step_id-3]
+				var hiddenRadio = this.$el.find('[data-cup="'+cupsVal+'"][data-band="'+bandsVal+'"]');
+				// console.log(this.$el.find('[data-cup="'+cupsVal+'"][data-band="'+bandsVal+'"]'))
+				hiddenRadio.click();
+				hiddenRadioId = $(hiddenRadio).attr('id');
+				that.$el.find('[data-button="'+hiddenRadioId+'"]').click();
+			} else {
+				var hiddenRadioId = this.$el.find('input[type="radio"]:checked').attr('id');
+				that.$el.find('[data-button="'+hiddenRadioId+'"]').addClass('radio-label-selected');
+			};
+
+			if(this.model.options[this.step_id-3] != undefined){
+				var optionVal = this.model.options[this.step_id-3]
+				var hiddenRadio = this.$el.find('[data-option="'+optionVal+'"]').click();
+				var hiddenRadioId = $(hiddenRadio).attr('id');
+				that.$el.find('[data-button="'+hiddenRadioId+'"]').click();
+			};
+		
+			if(that.model.get('band') != undefined && that.model.get('cup') != undefined){
+				var bandVal = that.model.get('band');
+				var cupVal = that.model.get('cup');
+				that.firstLoad = true;
+				that.$el.find('[data-band="'+bandVal+'"]').click();
+				that.$el.find('[data-cup="'+cupVal+'"]').click();
+			} else {
+				that.firstLoad = true;
+				that.$el.find('[data-cup="'+that.model.cup+'"]').click();
+				that.$el.find('[data-band="'+that.model.band+'"]').click();
+			};
+
+			$('.bra-dial-sizes-cups li').each(function(){
+				if($(this).text().length>2){
+					$(this).css({"font-size":"60px"});
+				}
+			});
+			
+		},
+		stepBack: function(event){
+			//Handler for back button
+
+			event.preventDefault();
+			
+			//This just goes back one step
+			ga('send', 'pageview', {'page': '/find-your-fit/'+(Number(this.step_id)-1), 'title': 'Find Your Fit - Step '+(Number(this.step_id)-1)});
+			Fitfinder.router.navigate('/step/'+(Number(this.step_id)-1), {trigger: true});	
+		},
+		stepNext: function(event){
+			event.preventDefault();
+
+			//Submit our view form
+			this.stepSubmit();
+
+			//Go forward a step
+			Fitfinder.router.navigate('/step/'+(Number(this.step_id)+1), {trigger: true});	
+			
+		},
+		stepSubmit: function(){
+			var that = this;
+			//Get our cup/band change values from the checked radio button data-attrs
+			var choice = $("input[type='radio']:checked");
+			var choiceCup = choice.data('cup');
+			var choiceBand = choice.data('band');
+			//If this step had a data-option, grab those aas well and
+			if(choice.data('option')){
+				var choiceOption = choice.data('option');
+				this.model.options[this.step_id-3] = choiceOption;
+			}
+
+			//Add the cup/band values to their respective arrays with an index equal to 
+			//the current step (minus 2 indicies for intro and bra size)
+			this.model.answerStrings[this.step_id] = $('.radio-label-selected').text()
+			this.model.cupsMath[this.step_id-3] = choiceCup;
+			this.model.bandsMath[this.step_id-3] = choiceBand;
+
+		},
+		formComplete: function(event){
+			event.preventDefault();
+			//Submit the last section of the form
+			this.stepSubmit();
+
+			var i = 0;
+			var stepsLength = this.model.cupsMath.length;
+			var bandsize = 0;
+			var cupsize = 0;
+
+			//Iterate through both the arrays and sum the indicies, making sure it never goes over |2|
+			for(i; i<stepsLength; i++){
+				bandsize += this.model.bandsMath[i];
+				// console.log(this.model.bandsMath[i])
+				if(bandsize > 2){
+					bandsize = 2;
+				} else if (bandsize < -2){
+					bandsize = -2
+				}
+				cupsize += this.model.cupsMath[i];
+				// console.log(this.model.cupsMath[i])
+				if(cupsize > 2){
+					cupsize = 2;
+				} else if (cupsize < -2){
+					cupsize = -2
+				}
+			}
+
+			//Get the options from last two questions
+			var optionsReturn = this.checkOptions();
+
+			//Add those suckers in here, again with the |2| rule
+			bandsize += optionsReturn.bandsize;
+			if(bandsize > 2){
+				bandsize = 2;
+			} else if (bandsize < -2){
+				bandsize = -2
+			}
+			cupsize += optionsReturn.cupsize;
+			if(cupsize > 2){
+				cupsize = 2;
+			} else if (cupsize < -2){
+				cupsize = -2
+			}
+
+			//Update our model
+			this.model.adjustBand(bandsize);
+			this.model.adjustCup(cupsize);
+			//this.model.set({band: bandsize, cup: cupsize});
+			Fitfinder.router.navigate('/results/', {trigger: true});
+		}
+
+	});
+
+	return StepView;
+}());

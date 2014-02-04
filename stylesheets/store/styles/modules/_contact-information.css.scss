@@ -1,0 +1,49 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Contact Information Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+	.contact-information {
+		height: 130px;
+		text-align: center;
+		font-size: 16px;
+	}
+	.contact-information a{
+		font-family: $Din;
+		color:$black;
+
+	}
+	.contact-by {
+		height: 100%;
+		line-height: 20px;
+	}
+	.contact-by-image {
+		background-position: top center;
+		background-repeat: no-repeat;
+		height: 90px;
+		text-align: center;
+	}
+	.contact-by-phone {
+		background-image: image-url('contact-by-phone.png');
+	}
+	.contact-by-email {
+		background-image: image-url('contact-by-email.png');
+	}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+.contact-by:hover {
+	color: $black;
+}

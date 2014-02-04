@@ -1,0 +1,106 @@
+.plan-a-visit-map{
+	padding: 75px 30px 7px 30px;
+	text-align: center;
+}
+.where-to-stay, .plan-a-party{
+	background-color:#f4dbd1;
+	min-height:450px;
+	padding:20px;
+	img{
+		width:100%;
+
+	}
+
+}
+.where-to-stay{
+	h3{
+		margin:10px 0;
+		font-family: $Din;
+		font-weight: normal;
+	}
+	p{
+		margin:10px 0;
+	}
+	a{
+		margin-top:10px;
+	}
+}
+.plan-a-party{
+	background: #f4dbd1 image-url('plan-a-party.png') bottom right no-repeat;
+	background-size:100%;
+	img{
+		margin-top:5px;
+	}
+	p{
+		width:175px;
+		margin:80px 0 20px 0px;
+	}
+}
+.what-to-know{
+	width:28%;
+	-moz-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);
+	box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);
+	h6{
+		font-size: 14px;
+	}
+	li { 
+	    padding-left: 15px; 
+	    text-indent: -1.5em;
+	    margin-bottom:15px;
+	}
+
+	li:before {
+	    content: "\2022";
+	    color: $pink; 
+	    margin: 0 0.5em;  
+	}
+}
+@media only screen and (max-width: 959px) {
+	.plan-a-party p {
+	width: 100%;
+	margin: -1px 0 20px 0px;
+	}
+	.what-to-know {
+		width: 38%;
+	}
+	.rg-gallery-visit {
+		width: 60%;
+
+	}
+}
+@media only screen and (max-width: 767px) {
+
+	.what-to-know {
+		h6 {
+			font-size: 12px;
+		}
+	}
+
+	.plan-a-visit-map{
+		width:100%;
+		padding:25px 0px 0px 0px;
+	}
+	.store-hours-plan-a-visit{
+		margin:0px;
+	}
+	.rg-gallery{
+		width:100%;
+	}
+	.what-to-know{
+		width:100%;
+	}
+	.plan-a-party{
+		margin-top:20px;
+		p{
+			margin: 20px 0 20px 0px;
+		}
+	}
+	
+
+}
+@media only screen and (max-width: 479px) {
+	.where-to-stay, .plan-a-party {
+		min-height:370px;
+	}
+}

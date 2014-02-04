@@ -1,0 +1,76 @@
+
+// -------------------------------------
+//
+//   Lists Module -
+//   Styles for the Lists Module
+//
+// -------------------------------------
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.label-list{
+	list-style: none;
+	label{
+		color: $black;
+		font-family: $Din;
+		font-size: 18px;
+	}
+}
+.credit-cards-list{
+	li{
+		margin-bottom: 10px;
+	}
+	img{
+		vertical-align: middle;
+	}
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.pink-dash-list{
+	border-top: $pink-dash;
+	margin-top: 10px;
+	li{
+		border-bottom: $pink-dash;
+		padding: 30px 0;
+		.thumbnail{
+			float: left;
+			margin: 0 20px 20px 0;
+			min-height: 90px;
+			width: 90px;
+		}
+		.attribute{
+			font-size: 12px;
+		}
+		.title{
+			font-family: $Din;
+			font-size: 21px;
+			line-height: 24px;
+			a{
+				color: $black;
+				&:hover{
+					color: $grey;
+				}
+			}
+		}
+	}
+}
+.pink-dash-list-pagination{
+	margin-top: 10px;
+	.pagination > li{
+		font-family: $Din;
+		font-weight: normal;
+	}
+	.pagination > li > a{
+		color: $black
+	}
+}
+li.no-pink-dash-list {
+	border: none;
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------

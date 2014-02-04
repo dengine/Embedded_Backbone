@@ -1,0 +1,241 @@
+/*body{
+	background: url(<%= image_path 'bg-welcome.png' %>) repeat-x, url(<%= image_path 'bg-texture.png' %>) ;
+}
+nav #main-nav-bar{
+	width:482px;
+	height:50px;
+	background: url(<%= image_path 'pink-banner.png' %>);
+	padding:27px 0 0 42px;
+	float:right;
+	border:none;
+	margin:0px;
+}
+#header{
+	
+	height:80px;
+	margin:0 auto;
+}
+#navigation{
+	width:100%;
+	background:#000;
+	height:80px;
+	margin-bottom:60px;
+}
+#navigation #header a{
+	font-weight: normal;
+	text-transform:capitalize;
+}
+nav#top-nav-bar ul li{
+	padding: 0 5px;
+}
+#nav-bar a{
+	font-family: 'Trocchi', serif;
+	color:#FFF;
+}
+#navigation #header #main-nav-bar a{
+	font-size:22px;
+}
+#navigation #header #main-nav-bar a{
+	font-family:"din-condensed-web",sans-serif;
+	color:#000;
+}
+#navigation #header #main-nav-bar .current a{
+	color: #fff;
+}
+#logo{
+	height:152px;
+	display: block;
+	background: url(<%= image_path 'logo.png' %>) no-repeat;
+}
+#welcome-to-shop{
+	width:100%;
+	height:810px;
+	background: url(<%= image_path 'welcome-to-our-shop.png' %>) no-repeat;
+}
+#featured-video{
+	position:absolute;
+	left:235px;
+	top:441px;
+}
+#feature-video{
+	position:relative;
+	width:100%;
+	height:760px;
+	background: url(<%= image_path 'featuring-homepage.png' %>);
+	pointer-events:none;
+}
+#bra-problems{
+	width:100%;
+	height:653px;
+	background: url(<%= image_path 'bra-problems-bg.png' %>) no-repeat;
+	margin-top:50px;
+}
+#bra-problems #bra-model .hover-spot{
+	background: url(<%= image_path 'bra-problems-hoverspot.png' %>) no-repeat;
+	position:absolute;
+	width:29px;
+	height:29px;
+	display:block;
+}
+#bra-problems #bra-model #hover1{
+	left: 74px;
+	top: 179px;
+}
+#bra-problems #bra-model #hover2{
+	left: 99px;
+	top: 237px;
+}
+#bra-problems #bra-model #hover3{
+	left: 163px;
+	top: 292px;
+}
+#bra-problems #bra-model #hover4{
+	left: 253px;
+	top: 316px;
+}
+#bra-problems #bra-model{
+	width:325px;
+	height:551px;
+	background: url(<%= image_path 'bra-model-front.png' %>);
+	position:absolute;
+	bottom:0px;
+	left:319px;
+}
+#bra-problems #view-control{
+	font-family: 'Trocchi', serif;
+	color:#808080;
+	font-size:14px;
+	width:258px;
+	position: absolute;
+	top: 364px;
+	left: 27px;
+	line-height: 20px;
+
+}
+#bra-problems #change-view{
+	width:172px;
+	height:93px;
+	display:block;
+	background: url(<%= image_path 'view-control.png' %>);
+}
+#bra-problems #hover-info {
+	width:293px;
+	position: absolute;
+	left:623px;
+	top:184px;
+	line-height: 20px;
+	text-align:center;
+}
+#bra-problems #hover-info h2{
+	color:#5c384c
+}
+#bra-problems #hover-info p{
+	font-family:"din-condensed-web",sans-serif;
+	color:#fff;
+	font-size: 19px;
+}
+#plan-a-visit{
+	width:100%;
+
+}
+#plan-a-visit .frame{
+	width:960px;
+	height:741px;
+	margin:0 auto;
+	background: url(<%= image_path 'plan-a-visit-frame.png' %>);
+	position: relative;
+}
+#plan-a-visit .frame-content{
+	position: absolute;
+	top: 300px;
+	left: 189px;
+	font-family: 'Trocchi', serif;
+	width: 174px;
+	font-size: 13px;
+	color: #7c7575;
+}
+#plan-a-visit .frame-content .visit-us-btn{
+	width:137px;
+	height:84px;
+	background: url(<%= image_path 'btn-visit-us.png' %>);
+	display:block;
+}
+.bra-types .bra-type{
+	text-align: center;
+	margin-bottom:25px;
+}
+.bra-type a{
+	color:#f35181;
+}
+.bra-types .bra-type a:first-child{
+	width:270px;
+	height:163px;
+	display:block;
+	margin-bottom:15px;
+}
+.bra-types .bra-type a:first-child:hover{
+	background-position: 270px;
+}
+.bra-types .bra-type a:nth-child(2){
+	font-size: 20px;
+	font-family: "din-condensed-web",sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-top:10px;
+}
+.bra-types .metal-plate{
+	width:533px;
+	height:149px;
+	margin:0 auto 40px auto;
+	background: url(<%= image_path 'metal-plate.png' %>) no-repeat;
+}
+.bra-types .everyday{
+	background: url(<%= image_path 'types-of-bra/everyday-comb.png' %>) left;
+}
+.bra-types .fashion{
+	background: url(<%= image_path 'types-of-bra/fashion-comb.png' %>) left;
+}
+.bra-types .nursing{
+	background: url(<%= image_path 'types-of-bra/nursing-comb.png' %>) left;
+}
+.bra-types .strapless{
+	background: url(<%= image_path 'types-of-bra/strapless-comb.png' %>) left;
+}
+.bra-types .sports{
+	background: url(<%= image_path 'types-of-bra/sports-comb.png' %>) left;
+}
+.bra-types .masect{
+	background: url(<%= image_path 'types-of-bra/masect.png' %>) left;
+}
+
+#featuring{
+	width:100%;
+	background: url(<%= image_path 'featuring-bg-homepage.png' %>);
+	margin-top:100px;
+}
+#feature-video{
+	width:960px;
+	margin:0 auto;
+}
+
+
+footer#footer{
+	background: #313131;
+	font-family:"din-condensed-web",sans-serif;
+	text-align: center;
+	height:35px;
+	padding: 18px 0 0 0;
+}
+#footer-left{
+	display:none;
+}
+#footer li{
+	list-style-type: none;
+	display: inline;
+	font-size: 17px;
+	text-transform: uppercase;
+	margin: 0 5px;
+}
+#footer a {
+	color:#fff;
+}*/

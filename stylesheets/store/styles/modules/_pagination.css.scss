@@ -1,0 +1,44 @@
+// -------------------------------------
+//
+//   Pagination Module -
+//   Styles for the Pagination Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.pagination-container {
+	height: 31px;
+	padding: 5px;
+	text-align: center;
+}
+.pagination {
+	display: inline-block;
+	& > li {
+		color: $pink;
+		float: left;
+		font-family: $Jaf;
+		margin: 0 5px;
+
+		& > a {
+			color: $white;
+			font-weight: bold;
+			text-transform: uppercase;
+
+			&.active {
+				color: $pink;
+			}
+		}
+	}
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------

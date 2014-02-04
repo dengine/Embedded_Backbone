@@ -1,0 +1,816 @@
+// -------------------------------------
+//
+//   Fitfinder Module -
+//   Styles for the Fitfinder Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+#fitfinder {
+
+}
+.fade-out-start {
+	opacity: 0;
+}
+.loader {
+	display: block;
+	text-align: center;
+	& > h1 {
+		font-family: $Din;
+		color: $white;
+		font-size: 32px;
+		margin-top: -55px;
+	}
+}
+.fitfinder-page {
+	min-height: 835px;
+}
+.step {
+	// min-height: 835px;
+}
+.fit-tip {
+	background: $green;
+	color: $white;
+	padding: 30px 15px;
+}
+.model-container {
+	height: 520px;
+	position: relative;
+}
+.model-img, .model-img-static {
+	max-width: none;
+	left: -200px;
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+.model-img-static {
+	left: -100px;
+	opacity: 1;
+}
+.radio-bg {
+	background-position: left top;
+	background-repeat: no-repeat;
+	margin-top: 60px;
+	margin-left: 20px;
+	& > input[type="radio"] {
+		display: none;
+	}
+	.radio-label {
+		cursor: pointer;
+		font-family: $Din;
+		font-size: 20px;
+		color: $lightgrey;
+	}
+}
+.results-container {
+
+	text-align: center;
+	& > img {
+		margin-bottom: 15px;
+	}
+	& > .button {
+		display: block;
+		margin: 0 auto;
+	}
+	& > p {
+		margin-bottom: 20px;
+	}
+
+}
+.results-video-container {
+	position: relative;
+	padding: 15px;
+	margin-bottom: 20px;
+
+}
+.results-video {
+	height: 270px;
+
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+}
+.results-tv {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1;
+	pointer-events: none;
+}
+.results-products {
+	position: relative;
+	@include single-box-shadow(rgba(0,0,0,.2), 0px, 0px, 2px, 1px, false);
+
+	.product {
+		img {
+			max-height: 160px;
+		}
+	}
+	& > .bra-stamp {
+		left: -92px;
+		top: -40px;
+	}
+	margin-bottom: 45px;
+	text-align: center;
+}
+.results-box-container {
+	background-image: image-url('we-recommend-marquee.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-align: center;
+}
+.results-size-box {
+	color: $black;
+	display: inline-block;
+	height: 88px;
+	line-height: 88px;
+	font-family: $Din;
+	font-size: 80px;
+	font-weight: bold;
+	text-align: center;
+	margin: 110px auto 20px auto;
+	width: 200px;
+}
+.results-text {
+	color: $white;
+	text-align: center;
+	margin: 25px 0;
+}
+.results-shop:hover {
+	opacity: .8;
+}
+.static-text {
+	color: $black;
+	font-family: $Din;
+	font-size: 19px;
+	line-height: 23px;
+	padding-left: 60px;
+}
+.bra-dials-container {
+	text-align: center;
+}
+.bra-dials {
+	display: inline-block;
+	margin: 55px auto 0 auto;
+	padding-bottom: 300px;
+}
+.bra-dial {
+	float: left;
+	text-align: center;
+}
+.bra-dial-center {
+	display: inline-block;
+	float: none;
+	margin-top: 25px;
+}
+.bra-size {
+	input[type="radio"] {
+		display: none;
+	}
+}
+.bra-size-center {
+	text-align: center;
+}
+.bra-dial-case-container {
+	height: 183px;
+	margin: 0 10px;
+	overflow: hidden;
+	position: relative;
+	width: 183px;
+}
+.dial-case {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.bra-dial-button {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center top;
+	display: inline;
+	height: 30px;
+	width: 70px;
+}
+.bra-dial-sizes {
+	background-color: $pink;
+	left: 0;
+	position: absolute;
+	top: 1;
+	width: 100%;
+	z-index: 1;
+
+	& > li {
+		color: $white;
+		height: 183px;
+		font-family: $Din;
+		font-size: 110px;
+		line-height: 183px;
+	}
+}
+.fitfinder-mobile-nav {
+	display: none;
+
+}
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.fitfinder-page-intro {
+	.text {
+		color: $white;
+		font-family: $Trocchi;
+		position: absolute;
+		right: 0;
+		top: 285px;
+		width: 345px;
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	.button {
+		margin-bottom: 30px;
+	}
+}
+.model-container-top {
+	height: 435px;
+
+	.model-img {
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 90%;
+	}
+}
+.model-container-slim {
+	height: 524px;
+
+	.model-img {
+		left: -100px;
+		top: 75px;
+	}
+}
+.model-top {
+	height: 650px;
+	.model-img {
+		left: -150px;
+	}
+}
+.model-top-large {
+	height: 850px;
+}
+.step-question {
+	& > img {
+		width: 100%;
+	}
+}
+.img-wood {
+	position: absolute;
+	bottom: 0;
+	width: 125%;
+	left: -12%;
+	max-width: none;
+}
+.img-fittingroom {
+	position: absolute;
+	top: -70px;
+	width: 100%;
+	left: 0;
+}
+.img-girls {
+	position: absolute;
+	top: 160px;
+	left: 0;
+}
+.radio-bg-vert {
+
+}
+.radio-bg-vert-3 {
+	background-image: image-url('radio-vert-3.png');
+	background-position: 7px 5px;
+	.radio-label {
+		height: 50px;
+		line-height: 50px;
+		margin-bottom: 87px;
+		text-align: left;
+		padding-left: 80px; 
+	}
+}
+.radio-bg-vert-5 {
+	background-image: image-url('radio-vert-5.png');
+	background-position: 7px 10px;
+	margin-top: 30px;
+	.radio-label {
+		height: 52px;
+		line-height: 50px;
+		margin-bottom: 27px;
+		text-align: left;
+		padding-left: 80px; 
+	}
+}
+.radio-bg-horz {
+	margin-top: 15px;
+
+	.radio-label {
+		float: left;
+		text-align: center;
+	}
+}
+.radio-bg-horz-3 {
+	background-image: image-url('radio-bg-horz-3.png');
+	background-position: center 47px;
+	margin-bottom: 60px;
+	.radio-label {
+		height: 85px;
+	}
+}
+
+.radio-bg-horz-3-tall {
+	background-position: center 77px;
+	margin-top: 90px;
+	.radio-label {
+		height: 115px;
+		line-height: 24px;
+		&.four {
+			padding: 0 70px;
+		}
+	}
+}
+.radio-bg-horz-margin {
+	margin-top: 90px;
+	margin-bottom: 270px;
+	background-position: center 72px;
+	.radio-label {
+		height: 110px;
+	}
+
+}
+.radio-bg-curve {
+	background-image: image-url('radio-bg-curve.png');
+	background-position: 5px 10px;
+	.radio-label {
+		height: 50px;
+		line-height: 50px;
+		margin-bottom: 160px;
+		text-align: left;
+		padding-left: 80px; 
+
+		&.curve-indent {
+			display: block;
+			margin-left: 66px;
+			margin-bottom: 115px;
+		}
+	}
+}
+.radio-bra {
+	& > input[type="radio"] {
+		display: none;
+	}
+	.radio-label {
+		background-repeat: no-repeat;
+		background-position: center 6px;
+		margin-right: 7px;
+		width: 25px;
+		height: 165px;
+		float: left;
+	}
+	.radio-label-bra-1 {
+		background-image: image-url('bra-label-1.png');
+		&.radio-label-selected {
+			background-image: image-url('bra-label-1-selected.png');
+		}
+	}
+	.radio-label-bra-2 {
+		background-image: image-url('bra-label-2.png');
+		&.radio-label-selected {
+			background-image: image-url('bra-label-2-selected.png');
+		}
+	}
+	.radio-label-bra-3 {
+		background-image: image-url('bra-label-3.png');
+		&.radio-label-selected {
+			background-image: image-url('bra-label-3-selected.png');
+		}
+	}
+}
+.radio-label-no-text {
+	text-indent: -999px;
+}
+.bra-container {
+	height: 400px;
+	margin-top: 60px;
+}
+.bands {
+	height: 350px;
+	margin-top: 60px;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	.model-img {
+		left: 0;
+	}
+}
+.bra-select-text {
+	float: left;
+	font-family: $Din;
+	font-size: 22px;	
+	height: 165px;
+	width: 100px;
+}
+.bra-band {
+	position: absolute;
+}
+.bra-band-left {
+	left: 0;
+	z-index: 1;
+	left: -100px;
+}
+.bra-band-right {
+	right: 0;
+	z-index: 2;
+	top: -3px;
+	right: -172px;
+}
+.bra-dial-button-minus {
+	background-image: image-url('fitfinder-dial-minus.png');
+}
+.bra-dial-button-plus {
+	background-image: image-url('fitfinder-dial-plus.png');
+}
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.fade-out {
+	opacity: 0;
+}
+.model-img-show {
+	opacity: 1;
+}
+.radio-bg {
+	.radio-label-selected {
+		background-position: left center;
+		background-repeat: no-repeat;
+		color: $black;
+		&.radio-label-p3 {background-image: image-url('ff-selector-p3.png');}
+		&.radio-label-p2 {background-image: image-url('ff-selector-p2.png');}
+		&.radio-label-p1 {background-image: image-url('ff-selector-p1.png');}
+		&.radio-label-g1 {background-image: image-url('ff-selector-g1.png');}
+		&.radio-label-g2 {background-image: image-url('radio-selected.png');}
+	}
+}
+
+.radio-bg-horz {
+	.radio-label-selected {
+		background-position: center bottom;
+	}
+}
+.radio-bg {
+	.radio-label:hover {
+		color: $black;
+	}
+}
+@media only screen and (min-width: 768px) and  (max-width: 959px) {
+	.bra-dial-center {
+		margin-left: 100px;
+	}
+	.fitfinder-page {
+		min-height: 625px;
+	}
+	.img-girls {
+		width: 54%;
+	}
+	.model-container {
+		.model-img {
+			height: 839px;
+			left: -290px;
+			width: auto;
+		}
+	}
+	.model-container-top {
+		height: 375px;
+		.model-img {
+			height: auto;
+			left: 0;
+			width: 90%;
+		}
+	}
+	.model-container-slim {
+		.model-img {
+			height: 700px;
+			left: -105px;
+			top: 155px;
+		}
+	}
+	.model-top {
+		.model-img {
+			height: 850px;
+			left: -195px;
+		}
+	}
+	.model-container-ipad-top {
+		.model-img {
+			top: 50px;
+		}
+	}
+	.bands {
+		.model-img {
+			width: 865px;
+		}
+	}
+	.radio-bg-horz-3-tall, .radio-bg-horz-3 {
+		background-size: 80%;
+		background-position: center 90px;
+		.radio-label {
+			height: 126px;
+		}
+	}
+	.radio-bg-vert-5 {
+		.radio-label {
+			height: 55px;
+			line-height: 26px;
+			margin-bottom: 25px;
+			padding-top: 9px;
+		}
+	}
+	.radio-bg-curve {
+		.radio-label {
+			line-height: 26px;
+		}
+	}
+	.results-size-box {
+		margin-top: 80px;
+	}
+	.results-video {
+		height: 217px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.static-text {
+		margin-top: 25px;
+		padding-left: 0;
+	}
+	.loader {
+		display: block;
+		margin-top: 100px;
+		text-align: center;
+		& > h1 {
+			margin-top: -35px;
+			text-align: center;
+		}
+	}
+	.mobile-hide {
+		display: none !important;
+	}
+	.step-question {
+		padding: 0;
+		& > img {
+			padding: 0 20px;
+		}
+	}
+	.bra-dials {
+		padding-bottom: 150px;
+	}
+	.bra-dial-center {
+		margin-bottom: 25px;
+	}
+	.fitfinder-mobile-nav {
+		display: block;
+		margin-bottom: 20px;
+		padding: 40px 10px 0 10px;
+		text-align: center;
+	}
+	.fitfinder-page-intro {
+		padding-top: 15px;
+	}
+	.fitfinder-mobile-number {
+		background-image: image-url('fitfinder-numbers-mobile.png');
+		background-repeat: no-repeat;
+		height: 41px;
+		margin: 25px auto 20px auto;
+		width: 41px;
+	}
+	.fitfinder-mobile-number-one { background-position: right bottom;}
+	.fitfinder-mobile-number-two { background-position: -42px bottom;}
+	.fitfinder-mobile-number-three { background-position: 0px bottom;}
+	.fitfinder-mobile-number-four { background-position: right -42px;}
+	.fitfinder-mobile-number-five { background-position: -42px -42px;}
+	.fitfinder-mobile-number-six { background-position: 0px -42px;}
+	.fitfinder-mobile-number-seven { background-position: right 0px;}
+	.fitfinder-mobile-number-eight { background-position: -42px 0px;}
+	.fitfinder-mobile-number-nine { background-position: 0px 0;}
+	.fitfinder-mobile-number-ten { 
+		background-position: 0px 0;
+		background-image: image-url('fitfinder-mobile-number-ten.png');
+	}
+
+	.img-girls {
+		top: 130px;
+		width: 100%;
+	}
+	.img-fittingroom {
+		position: static;
+		top: 0;
+		width: 100%;
+	}
+	.fit-tip {
+		padding: 30px 0px;
+		& > div {
+			padding: 0 10px;
+		}
+		a:hover {
+			opacity: .8;
+		}
+	}
+	.fitfinder-page-intro .text {
+		text-align: center;
+		top: 590px;
+		padding: 0 10px;
+		width: 100%;
+		& > p {
+			text-align: center;
+		}
+	}
+	.img-wood {
+		height: 440px;
+		left: -50%;
+		width: 200%;
+		max-width: none;
+	}
+	.model-container {
+		border-top: 2px solid $pink;
+		border-bottom: 2px solid $pink;
+		height: 260px;
+	}
+	.model-top {
+		.model-img {
+			left: 0;
+		}
+	}
+	.model-container-top {
+		height: 125px;
+
+		.model-img {
+			width: auto;
+		}
+	}
+	.model-container-slim {
+		height: 229px;
+		overflow: hidden;
+		.model-img {
+			left: 35%;
+			top: 25px;
+		}
+	}
+	.model-img {
+		max-width: 100%;
+		max-height: 100%;
+		left: 0px;
+	}
+	.model-img-static {
+		left: 0;
+		height: 100%;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+	}
+	button.step-submit,.button.step-submit {
+		background-color: transparent;
+		background-image: image-url('ff-forward-button-mobile.png');
+		background-position: right center;
+		top: 68px;
+		right:  15px;
+		left: auto;
+		text-indent: -9999px;
+		.button-tag {
+			display: none;
+		}
+	}
+	button.step-back,.button.step-back {
+		background-color: transparent;
+		background-image: image-url('ff-back-button-mobile.png');
+		background-position: left center;
+		top: 68px;
+		left:  15px;
+		right: auto;
+		text-indent: -9999px;
+		.button-tag {
+			display: none;
+		}
+	}
+	.bra-container {
+		border-top: 2px solid $pink;
+		border-bottom: 2px solid $pink;
+		height: 260px;
+		margin: 50px 0;
+		padding: 30px 0;
+	}
+	.radio-bra.offset-by-four {
+		width: 100px;
+		height: 105px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.bands {
+		height: 150px;
+		.model-img {
+			width: 720px;
+			left: 50%;
+			margin-left: -350px;
+			max-width: none;
+		}
+	}
+	.radio-bg-vert-3, .radio-bg-horz-3, .radio-bg-horz-3-tall {
+		background-image: image-url('radio-bg-mobile-3.png');
+		background-position: 7px 5px;
+		margin-top: 30px;
+		margin-bottom: 0;
+		.radio-label {
+			height: 50px;
+			line-height: 26px;
+			margin-bottom: 27px;
+			padding-top: 9px;
+			padding-left: 80px;
+			text-align: left;
+			width: 260px !important;
+
+			&.radio-label-selected {
+				background-position: center left;
+			}
+			&.four {
+				padding: 9px 0  0 80px;
+			}
+		}
+	}
+	.radio-bg-vert-5 {
+		.radio-label {
+			height: 50px;
+			line-height: 26px;
+			margin-bottom: 27px;
+			padding-top: 9px;
+			padding-left: 80px;
+			text-align: left;
+			width: 260px;
+		}
+	}
+	.radio-bg-curve {
+		background-image: image-url('radio-bg-mobile-2.png');
+
+		.radio-label {
+			height: 50px;
+			line-height: 26px;
+			margin-bottom: 27px;
+			padding-top: 9px;
+			padding-left: 80px;
+			text-align: left;
+			width: 260px;
+
+			&.curve-indent {
+				margin-left: 0px;
+			}
+		}
+	}
+	.results-container {
+		padding-top: 20px;
+	}
+	.results-size-box {
+		height: 55px;
+		font-size: 60px;
+		margin-top: 40px;
+	}
+	.results-video {
+		height: 250px;
+	}
+}
+
+@media only screen and (min-width: 0px) and  (max-width: 479px) {
+	.bra-dial {
+		float: none;
+		margin-bottom: 40px;
+	}
+	.fitfinder-page {
+		min-height: 780px;
+	}
+	.fitfinder-page-intro .text {
+		top: 468px;
+	}
+	.img-wood {
+		left: -75%;
+		width: 250%;
+	}
+	.results-size-box {
+		font-size: 40px;
+		margin-top: 25px;
+	}
+	.results-video {
+		height: 175px;
+	}
+}

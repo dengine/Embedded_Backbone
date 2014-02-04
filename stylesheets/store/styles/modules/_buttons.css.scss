@@ -1,0 +1,172 @@
+// -------------------------------------
+//
+//   Button Module -
+//   Styles for the Button Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.button, button {
+	background-color: $pink;
+	background-image: image-url('border-image.png');
+	background-repeat: repeat-x;
+	border: none;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $Din;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 10px 20px;
+	position: relative;
+	text-align: center;
+	&:hover{
+		color: $white;
+		opacity: 0.8;
+	}
+	
+}
+
+.button-tag {
+	height: 12px;
+	position: absolute;
+	bottom: -12px;
+	width: 13px;
+}
+.button-margin-right{
+	margin-right:15px;
+}
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+button.large, .button.large {
+	line-height: 37px;
+	height: 37px;
+	width: auto;
+	padding: 0 10px;
+	font-size: 20px;
+
+	&.place-order {
+		margin-right: 5px;
+	}
+}
+
+button.image, .button.image {
+    background: none;
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 84px;
+    opacity: 1;
+    text-indent: -9999px;
+    width: 137px;
+
+    &:hover {
+            background-position: left -84px;
+            opacity: 1;
+    }
+    &.fit-me{
+    	background-image: image-url("button-fit-me.png");
+    }
+    &.shop{
+    	background-image: image-url("button-shop.png");
+    }
+    &.home{
+    	background-image: image-url("button-home.png");
+    }
+    &.submit{
+    	background-image: image-url("button-submit.png");
+    }
+    &.buy{
+    	background-image: image-url("button-buy.png");
+    }
+    &.sign-in{
+    	background-image: image-url("button-sign-in.png");
+    }
+}
+
+.button.step-submit, button.step-submit {
+	background-image: image-url('button-arrow-right.png');
+	background-position: 65px center;
+	background-repeat: no-repeat;
+	font-family: $Jaf;
+	font-weight: bold;
+	font-size: 16px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 30px 0 15px;
+	position: absolute;
+	text-transform: uppercase;
+	top: 520px;
+	right: -15px;
+}
+.button.step-back, button.step-back {
+	background-color: $green;
+	background-image: image-url('button-arrow-left.png');
+	background-position: 15px center;
+	background-repeat: no-repeat;
+	font-family: $Jaf;
+	font-weight: bold;
+	font-size: 16px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 15px 0 30px;
+	position: absolute;
+	text-transform: uppercase;
+	top: 580px;
+	right: -13px;
+}
+
+.button-tag-right {
+	right: 0;
+}
+.button-tag-pink {
+	background-image: image-url('button-tag-pink.png');
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+.button-tag-green {
+	background-image: image-url('button-tag-green.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+.button-right{
+	float: right;
+}
+
+button.mobile-drop,.button.mobile-drop {
+	display: none;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+
+}
+// -------------------------------------
+//   States
+// -------------------------------------
+@media only screen and (max-width: 767px) {
+	.block-center-mobile {
+		text-align: center;
+		.button-right {
+			float: none;
+		}
+	}
+	button.mobile-drop,.button.mobile-drop {
+		display: block;
+		background-color: transparent;
+		background-image: image-url('arrow-dropdown.png');
+		background-repeat: no-repeat;
+		height: 11px;
+		margin-top: 4px;
+		padding: 0 16px;
+		width: 18px;
+
+		&.down {
+			background-position: left -11px;
+		}
+	}
+}

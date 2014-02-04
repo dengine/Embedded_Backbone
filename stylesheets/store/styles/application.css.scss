@@ -1,0 +1,122 @@
+// -------------------------------------
+//
+//   Application.scss
+//   Contains an import section for libraries, core, and modules, the inbox, and a shame section for quick fixes and hacks
+//
+// -------------------------------------
+
+// -------------------------------------
+//   Libraries
+// -------------------------------------
+
+// ----- Reset ----- //
+@import "libs/reset";
+
+// ----- Skeleton ----- //
+// @import "libs/skeleton";
+@import "libs/elastislide";
+@import "libs/rgslider";
+@import "libs/selectBoxIt";
+
+// ----- Variable overrides for libraries ----- //
+@import "libs/library-variable-overrides";
+
+// ----- Compass - Setup: http://compass-style.org/help/
+// ----- Run compass create on project root 
+// ----- Delete generated ie, print, and screen files  
+// ----- Update paths on config.rb ----- //
+@import "compass";
+
+
+// -------------------------------------
+//   Core
+// -------------------------------------
+
+// ----- Settings - @Font-Face Declarations, Variables ----- //
+@import "core/settings";
+
+// ----- Helpers - Extends, Functions, and Mixins ----- //
+@import "core/helpers";
+
+// ----- Base - Base-level tags (body, p, etc.) ----- //
+@import "core/base";
+
+// ----- Typography - Fonts and Colors ----- //
+@import "core/typography";
+
+// ----- Layout - Margin, Padding, Sizing ----- //
+@import "core/layout";
+
+@import "core/themes";
+
+@import "spree-overrides";
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+@import "modules/about-us-slider";
+@import "modules/buttons";
+@import "modules/cart";
+@import "modules/checkout";
+@import "modules/contact";
+@import "modules/contact-information";
+@import "modules/content-box";
+@import "modules/dialogs";
+@import "modules/errors";
+@import "modules/example-module";
+@import "modules/faqs";
+@import "modules/fitfinder";
+@import "modules/flash-messages";
+@import "modules/footer";
+@import "modules/forms";
+@import "modules/header";
+@import "modules/homepage";
+@import "modules/js-warning";
+@import "modules/links";
+@import "modules/lists";
+@import "modules/login";
+@import "modules/mantles";
+@import "modules/meet-staff";
+@import "modules/nav_shop_dropdown";
+@import "modules/order-summary";
+@import "modules/order";
+@import "modules/pagination";
+@import "modules/product-filter-bar";
+@import "modules/product-list";
+@import "modules/product-detail";
+@import "modules/product-tabs";
+@import "modules/review";
+@import "modules/selectboxes";
+@import "modules/sidenav";
+@import "modules/similar-products";
+@import "modules/skip-fitting";
+@import "modules/social";
+@import "modules/social_widgets";
+@import "modules/stacked-boxes";
+@import "modules/ten-commandments";
+@import "modules/buying-for-her";
+@import "modules/mobile-nav";
+@import "modules/plan-a-visit";
+@import "modules/store-hours";
+@import "modules/validation";
+@import "modules/address";
+@import "modules/boobtalk";
+@import "modules/customer-comment";
+@import "modules/videos";
+@import "modules/forgot-password";
+@import "modules/credit-card";
+
+
+
+
+// -------------------------------------
+//   Inbox 
+// -------------------------------------
+// ----- The inbox allows developers, and those not actively working on the CSS, 
+// to quickly add styles that are easily seen by the maintainer of the file.
+
+
+// -------------------------------------
+//   Shame 
+// -------------------------------------
+// ----- Need to add a quick fix, hack, or questionable technique?  Add it here, fix it later.

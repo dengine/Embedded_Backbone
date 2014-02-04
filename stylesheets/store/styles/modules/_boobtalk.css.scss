@@ -1,0 +1,18 @@
+.black-bg{
+	background: image-url('bg-black.png') #212020 top no-repeat;
+}
+.boob-talk-footer{
+	padding: 25px 0;
+}
+.more-boob-talk{
+	img{
+		margin-top: -40px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+	.player .button {
+		margin-bottom: 30px;
+	}
+}

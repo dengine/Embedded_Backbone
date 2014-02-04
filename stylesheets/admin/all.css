@@ -1,0 +1,23 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *
+
+ *= require admin/spree_core
+ *= require admin/spree_promo
+
+ *= require_self
+ *= require_tree .
+ *= require admin/spree_boobtalk_videos
+ *= require admin/spree_press_room
+ *= require redactor-rails
+ *= require admin/spree_faq
+ *= require admin/spree_taxon_images
+ *= require admin/spree_boobs_on_the_move
+ *= require admin/spree_staff
+ *= require admin/spree_customer_comments
+ *= require admin/spree_easy_contact
+ *= require admin/spree_websails
+ *= require admin/spree_mercury_gift_cards
+*/

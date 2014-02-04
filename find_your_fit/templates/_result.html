@@ -1,0 +1,49 @@
+<div class="fade-out bg-purple-results clearfix">
+	<div class="container">
+		{{#if error}}
+		<div class="six columns results-container l-center l-vert-pad-step">
+			<%= image_tag('no-sizes.png', :alt => "Sorry, we currently don't carry any products in your size. Choose a different size to continue shopping.") %>
+			<%= render :partial => "spree/shared/session_sizes_form" %>
+		</div>
+		{{else}}
+		<div class="nine columns results-container l-center l-vert-pad-step">
+			<div class="clearfix results-box-container">
+				<div class="results-size-box">
+					{{bandsize}}{{cupsize}}
+				</div>
+				<div class="six columns l-center">
+					<div class="results-video-container">
+						<%= image_tag('results-tv.png', :class => 'results-tv') %>
+						<div class="results-video">
+							<iframe width="430" height="281" src="//www.youtube.com/embed/klkqzIBTwYQ?wmode=opaque&controls=0&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="eleven columns l-center">
+				<p class="results-text five columns alpha offset-by-one">Don’t freak out! Most women are wearing the wrong size bra. Now that you’ve been fitted, we’ve stocked your personal lingerie shop with the brands and styles we recommend just for you!</p>
+				<a class="results-shop four columns omega" href="{{url}}"><%= image_tag('results-shop.png') %></a>
+			</div>
+		</div>
+		{{#if relatedProducts}}
+		<div class="row">
+			<div class="results-products six columns l-center">
+				<div class="content-header content-header-green content-header-center">Most popular in your size</div>
+				<div class="content-box clearfix">
+					{{#each relatedProducts}}
+					<a href="{{product.url}}/{{product.id}}" class="product l-one-thirds">
+						<img src="{{product.image}}">
+						<p>{{product.brand}} {{product.name}}</p>
+					</a>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+		{{/if}}
+	</div>
+	{{/if}}
+</div>

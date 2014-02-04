@@ -1,0 +1,74 @@
+.customer-comments{
+	border-top:none;
+}
+
+.customer-comments li:last-child{
+	border-bottom:none;
+}
+.customer-comments li{
+	padding: 50px 0 20px 0;
+}
+.comment-box{
+	position:relative;
+	padding:20px;
+	-moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.comment-source{
+	text-align:left;
+	padding-bottom:30px;
+	h4{
+		font-family: $Din;
+		color:$grey;
+		font-weight:normal;
+	}
+	h4:first-child{
+		color:$black;
+		font-size:24px;
+	}
+
+}
+.comment-quotes{
+	width: 49px;
+	height: 33px;
+	display: block;
+	position: absolute;
+	background: url(/assets/comment-quotes.png);
+	top: -16px;
+	left: -34px;
+}
+.customer-comments-social{
+	text-align:center;
+	a{
+		width:79px;
+		height:79px;
+		display:inline-block;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+	.customer-comments-facebook{
+		background: url(/assets/customer-comments-fb.png);
+	}
+	.customer-comments-twitter{
+		background: url(/assets/customer-comments-tw.png);
+	}
+
+}
+.social-footer {
+	p {
+		color: $white;
+	}
+}
+
+
+@media only screen and (max-width: 479px) {
+	.plan-a-visit{
+		display:none;
+	}
+	.customer-comments li{
+		padding: 20px 0 20px 0;
+	}
+}

@@ -1,0 +1,43 @@
+<div class="container bg-white">
+	<div class="fade-out">
+	<div class="clearfix">
+		<div class="fitfinder-mobile-nav">
+			<div class="fitfinder-mobile-number fitfinder-mobile-number-five"></div>
+			<%= image_tag('ff-mobile-q-4.png') %>
+		</div>
+		<div class="four columns model-container model-container-slim">
+			<%= image_tag('fit-step4-a.png', :class => "slide-in-left model-img model-img-a") %>
+			<%= image_tag('fit-step4-b.png', :class => "slide-in-left model-img model-img-b") %>
+			<%= image_tag('fit-step4-c.png', :class => "slide-in-left model-img model-img-c model-img-show") %>
+			<%= image_tag('fit-step4-d.png', :class => "slide-in-left model-img model-img-d") %>
+			<%= image_tag('fit-step4-e.png', :class => "slide-in-left model-img model-img-e") %>
+		</div>
+		<div class="six columns step-question l-vert-pad-step mobile-hide">
+			<%= image_tag('fitfinder-step-4.png') %>
+		</div>
+		<div class="six columns offset-by-one">
+			<form class="step-form radio-bg radio-bg-vert radio-bg-vert-5">
+				<input id="radio-1" name="1" type="radio" data-img="a" data-band="0" data-cup="-2">
+				<div class="radio-label radio-label-g2" data-button="radio-1">There is a lot of extra room</div>
+				<input id="radio-2" name="1" type="radio" data-img="b" data-band="0" data-cup="-1">
+				<div class="radio-label radio-label-g1" data-button="radio-2">It's a little roomy</div>
+				<input id="radio-3" name="1" type="radio" data-img="c" data-band="0" data-cup="0" checked>
+				<div class="radio-label radio-label-p1" data-button="radio-3">They fill the cups nicely without spilling over</div>
+				<input id="radio-4" name="1" type="radio" data-img="d" data-band="0" data-cup="1">
+				<div class="radio-label radio-label-p2" data-button="radio-4">They spill over a little bit</div>
+				<input id="radio-5" name="1" type="radio" data-img="e" data-band="0" data-cup="2">
+				<div class="radio-label radio-label-p3" data-button="radio-5">They spill over a ton!</div>
+
+				<button class="button step-submit" type="submit">Next<div class="button-tag button-tag-right button-tag-pink"></div></button>
+			</form>
+		</div>
+	</div>
+	<div class="l-full clearfix fit-tip">
+		<div class="alpha seven columns offset-by-four">
+			<%= image_tag('fit-tip.png') %>
+			<p>The breast should be fully contained by the cup. If your breast is spilling over the top or sides, the cup is likely too small. If the exterior of the cup wrinkles significantly or you can feel room between your breast and the cup, the cup is likely too large.</p>
+		</div>
+	</div>
+	<a class="button step-back" href="#"><div class="button-tag button-tag-right button-tag-green"></div>Prev</a>
+	</div>
+</div>

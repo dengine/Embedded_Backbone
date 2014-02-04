@@ -1,0 +1,63 @@
+// -------------------------------------
+//
+//   Select Boxes Module -
+//   Styles for the Select Boxes Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.selectboxit-container {
+	margin-bottom: 10px;
+	width: 100%;
+
+}
+.selectboxit-container .selectboxit-btn {
+	background: $white;
+	border: 1px solid $lightgrey;
+	@include border-radius(3px);
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	padding-right: 4px;
+	width: 100%;
+}
+.selectboxit-container .selectboxit-options {
+	background: $white;
+	border-radius: 0px;
+	border-left: 1px solid $lightgrey;
+	border-bottom: 1px solid $lightgrey;
+	border-right: 1px solid $lightgrey;
+	max-height: 100px;
+	overflow-y: scroll;
+	padding-right: 4px;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+
+.selectboxit-arrow-container {
+	background: #dbdbdb;
+}
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+	background-image: image-url('dropdown-arrow.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100%;
+	top: 0%;
+}
+.selectboxit-option-icon-container {
+	display: none;
+}
+// -------------------------------------
+//   States
+// -------------------------------------

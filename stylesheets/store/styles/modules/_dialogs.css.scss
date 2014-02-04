@@ -1,0 +1,67 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Example Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+.dialog{
+	display: none;
+	.inner{
+		background-color: $white;
+		position: relative;
+	}
+}
+.dialog .close{
+	background: image-url("store/close.png") no-repeat;
+	display: block;
+	height: 29px;
+	position: absolute;
+		top: -14px;
+		right: -14px;
+	width: 29px;
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.first-timer, .create-account{
+	outline: $pink-dash;
+}
+.first-timer {
+	text-align: center;
+	img {
+		margin-bottom: 30px;
+	}
+	a {
+		margin-bottom: 10px;
+	}
+	margin-bottom: 20px;
+}
+
+.first-timer-list {
+	list-style-position: outside;
+	list-style-type: disc;
+	padding-left: 20px;
+	& > li {
+		margin-bottom: 10px;
+		color: $pink;
+
+		span {
+			color: #808080;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------

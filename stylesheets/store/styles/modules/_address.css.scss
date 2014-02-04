@@ -1,0 +1,22 @@
+.address h3{
+	color:$pink;
+	width:100%;
+	border-bottom:3px $pink solid;
+	font-family:$Jaf;
+	padding:10px 0;
+	margin:10px 0;
+	font-size:17px;
+}
+.address{
+	font-family:$Din;
+	font-size:18px;
+	color:$black;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+	.address{
+		margin:40px 0 !important;
+	}
+}

@@ -1,0 +1,117 @@
+// -------------------------------------
+//
+//   Product Filter Bar Module -
+//   Styles for the Product Filter Bar Module
+//
+// -------------------------------------
+.product-bar {
+	@include border-radius(5px);
+	@include single-box-shadow($black, 0px, 0px, 20px, -5px, true);
+	margin-bottom: 20px;
+	padding: 10px;
+	position: relative;
+}
+
+.product-bar-inner {
+	background-color: $black;
+	@include border-radius(5px);
+	padding: 0 20px;
+}
+.product-bar-filters {
+	.filter{
+		float: left;
+		margin: 5px 20px 0 5px;
+		text-align: left;
+		& > .label {
+			color: $white;
+			display: inline-block;
+			font-family: $Jaf;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 20px;
+			text-transform: uppercase;
+			padding: 4px 5px 0 0;
+		}
+		& > .selectboxit-container {
+			width: 90px;
+			margin-bottom: 5px;
+
+			span {
+				height: 22px;
+				line-height: 22px;
+			}
+		}
+	}
+	.filter-big {
+		& > .selectboxit-container {
+			width: 190px;
+		}
+	}
+}
+.bra-stamp {
+	position: absolute;
+	left: -122px;
+	top: -24px;
+}
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.ajax-loader{
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 86px;
+	height: 86px;
+	margin-top: -43px; /* Half the height */
+	margin-left: -43px; /* Half the width */
+	z-index: 100;
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+@media only screen and (max-width: 767px) {
+
+	.product-bar.no-mobile-color {
+		@include single-box-shadow(transparent, 0px, 0px, 20px, -5px, true);
+		padding: 0;
+		margin-bottom: 40px;
+	}
+	.product-bar.no-mobile-color {
+		.bra-stamp {
+			display: none;
+		}
+	}
+	.product-bar.no-mobile-color .product-bar-inner {
+		background-color: transparent;
+		padding: 0;
+	}
+	.product-bar-filters .filter {
+		width: 40%;
+		margin: 0 2%;
+		& > .selectboxit-container {
+			width: 100%;
+		}
+	}
+	.product-bar-filters .filter-big {
+		margin: 0 1%;
+		width: 85%;
+	}
+	.product-bar-filters .filter > .label {
+		color: $black;
+	}
+	.product-bar-filters .filter > .selectboxit-container {
+		margin: 0;
+	}
+	.product-bar-filters .filter > .label{
+		display: block;
+	}
+
+}

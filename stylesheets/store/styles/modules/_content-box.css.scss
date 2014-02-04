@@ -1,0 +1,151 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Content Box Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.content-box {
+	background: $white;
+	padding: 25px 15px 10px 15px;
+	table{
+		font-family: $Din;
+		font-size: 17px;
+	}
+	th{
+		background: #f8f8f8;
+		color: #b8b8b8;
+		font-family: $Jaf;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+	td{
+		padding: 10px 0;
+	}
+	td:first-child{
+		text-align:left;
+		padding:10px;
+	}
+	.stacked-item{
+		border-top: 2px solid $lightestgrey;
+		padding: 20px 0;
+		&:first-child{
+			border-top: none;
+		}
+		.title, .title a{
+			color: $black;
+			&:hover{
+				color: $grey;
+			}
+		}
+		.date{
+			color: $aqua;
+		}
+	}
+}
+.content-box-account{
+	th:first-child{
+		text-align: left;
+	}
+}
+.content-box-grey {
+	background-color: $lightgrey;
+}
+.content-box-no-pad{
+	padding: 0;
+}
+.content-box-eq-pad{
+	padding: 25px;
+}
+.content-box-coupon{
+	padding: 10px 15px;
+}
+.content-box-inner-padding{
+	padding: 25px 15px 10px 15px;
+}
+.content-box-double-padding{
+	padding: 40px 30px 20px 30px;
+}
+.content-header {
+	color: $white;
+	font-family: $Jaf;
+	font-size: 16px;
+	font-weight: bold;
+	height: 37px;
+	line-height: 37px;
+	padding-left: 15px;
+	position: relative;
+	text-transform: uppercase;
+}
+.content-header-black {
+	background: $black;
+}
+.content-header-green {
+	background: $green;
+}
+.content-header-aqua {
+	background: $aqua;
+}
+.content-header-center {
+	padding: 0;
+	text-align: center;
+}
+.content-header-account-view{
+	text-transform:capitalize;
+	font-family:$Trocchi;
+	font-size:12px;
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.content-box-small {
+	padding: 15px 10px 5px 10px;
+}
+.content-box-large {
+	padding: 45px 30px 35px 30px;
+}
+.content-box-product-tab {
+	padding: 30px 20px 10px 20px;
+}
+.content-box-grey {
+	background: $lightestgrey;
+}
+.content-box-black {
+	background: $black;
+	color: $white;
+}
+.content-box-pink {
+	background: $pink;
+	color: $white;
+	h1,h2,h3,h4,h5,h6,a{
+		color: $white
+	}
+}
+.content-box-aqua {
+	background: $aqua;
+	color: $white;
+	h1,h2,h3,h4,h5,h6{
+		color: $black
+	}
+	a{
+		color: $white;
+	}
+}
+.content-box-border {
+	border: 2px solid $lightestgrey;
+}
+// -------------------------------------
+//   States
+// -------------------------------------
+@media only screen and (max-width: 767px) {
+	.content-header {
+		padding-left: 15px;
+		text-align: left;
+	}
+}

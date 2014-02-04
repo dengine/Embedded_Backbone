@@ -1,0 +1,229 @@
+// -------------------------------------
+//
+//   Product Tabs Module -
+//   Styles for the Product Tabs Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.product-tabs {
+	margin: 20px 0 30px 0;
+	position: relative;
+}
+.tag {
+	background-color: $white;
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	@include border-top-left-radius(5px);
+	@include border-top-right-radius(5px);
+	@include single-box-shadow(rgba(0,0,0,.2), 0px, -2px, 2px, 1px, false);
+	cursor: pointer;
+	float: left;
+	font-size: 14px;
+	font-family: $Jaf;
+	font-weight: bold;
+	height: 35px;
+	line-height: 35px;
+	margin-top: -3px;
+	margin-right: 5px;
+	opacity: .5;
+	padding: 0 20px 0 40px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.tabs {
+	clear: both;
+	@include border-top-right-radius(5px);
+	@include border-bottom-right-radius(5px);
+	@include border-bottom-left-radius(5px);
+	@include single-box-shadow(rgba(0,0,0,.2), 0px, 0px, 3px, 3px, false);
+}
+.tab {
+	display: none;
+}
+.tabs-gold-arrow {
+	position: absolute;
+	top: -195px;
+	right: -170px;
+	z-index: 1;
+}
+.tab-column {
+	float: left;
+
+	& > h2 {
+		color: $green;
+		font-family: $Jaf;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+
+	}
+
+	& > ul {
+		li {
+			list-style: disc;
+			list-style-position: inside;
+		}
+	}
+}
+
+.care-product {
+	& > img {
+		float: left;
+		width: 50%;
+	}
+
+}
+.care-product-text {
+	float: left;
+	padding-left: 10px;
+	width: 50%;
+	.min-height > h2 {
+		font-family: $Din;
+		font-size: 17px;
+		font-weight: normal;
+	}
+	& > button {
+		margin-bottom: 5px;
+	}
+	& > a {
+		display: block;
+		font-family: $Trocchi;
+		font-size: 14px;
+		text-decoration: underline;
+	}
+
+	& > .min-height {
+		min-height: 80px;
+	}
+}
+.review-header {
+	margin-bottom: 30px;
+}
+.review-box {
+	@include border-radius(3px);
+	@include single-box-shadow(rgba(0,0,0,.2), 0px, 0px, 2px, 1px, false);
+	text-align: center;
+}
+	
+.review-box-content {
+	font-family: $Jaf;
+	font-weight: bold;
+	padding: 15px 0;
+	text-transform: uppercase;
+	& > p {
+		display: inline;
+	}
+	& > .ratings {
+		display: inline;
+	}
+	.ratings-stars {
+		display: inline;
+		margin-right: 10px;
+	}
+}
+.review-box-header {
+	background-image: image-url("grey-texture.png");
+	color: $white;
+	font-family: $Jaf;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 38px;
+	text-transform: uppercase;
+}
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.tag-why-we-love-it {
+	background-image: image-url("heart-icon-green.png");
+}
+.tag-reviews {
+	background-image: image-url("chat-bubble-green.png");	
+}
+.tag-bra-care {
+	background-image: image-url("bra-icon-green.png");	
+}
+
+.tab-column-full {
+	width: 97%;
+	margin: 0 1.5%;
+}
+.tab-column-half {
+	width: 47%;
+	margin: 0 1.5%;
+}
+.tab-column-third {
+	width: 30%;
+	margin: 0 1.5%;
+}
+.care-product-left {
+	padding-right: 30px;
+}
+.care-product-right {
+	border-left: 2px solid $lightgrey;
+	padding-left: 40px;
+}
+.review-box-content-size {
+	color: $green;
+}
+// -------------------------------------
+//   States
+// -------------------------------------
+.tag.active {
+	opacity: 1;
+}
+.tag-why-we-love-it.active {
+	background-image: image-url("heart-icon-grey.png");
+}
+.tag-reviews.active {
+	background-image: image-url("chat-bubble-grey.png");	
+}
+.tag-bra-care.active {
+	background-image: image-url("bra-icon-grey.png");	
+}
+.tab.active {
+	display: block;
+}
+@media only screen and (max-width: 959px) {
+	.tag {
+		opacity: 1;
+		width: 90%;
+	}
+	.care-product {
+		margin-bottom: 15px;
+		img {
+			width: 170px;
+		}
+	}
+	.care-product-text {
+		margin-top: 10px;
+		padding-left: 0;
+		width: 100%;
+
+		& > .min-height {
+			min-height: 0px;
+			margin-bottom: 10px;
+		}
+	}
+	.tabs-gold-arrow {
+		display: none;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.tag {
+		width: 100%;
+	}
+	.tab-column-half {
+		width: 100%;
+	}
+	
+	.care-product-right, .care-product-left {
+		padding-left: 0;
+		border: none;
+	}
+}

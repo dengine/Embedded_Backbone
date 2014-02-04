@@ -1,0 +1,38 @@
+// -------------------------------------
+//
+//   Links Module -
+//   Styles for the Links Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.arrow-link{
+	background: image-url('arrow-link-back.png') 0 -26px no-repeat;
+	display: block;
+	font-family: $Jaf;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	padding-left: 30px;
+	text-transform: uppercase;
+	&:hover{
+		background-position: 0 0;
+		color: $grey;
+	}
+}
+.pink-arrow-link{
+	color: $pink;
+	background-position: 0 -52px;
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------

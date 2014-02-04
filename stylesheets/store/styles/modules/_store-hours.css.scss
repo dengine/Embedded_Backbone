@@ -1,0 +1,48 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Contact Information Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+	
+.store-hours{
+	background: url(/assets/plan-a-visit-hours.png) repeat-x;
+	width: 250px;
+	height: 250px;
+	text-align:center;
+	font-family:$Din;
+	color:$white;
+
+	padding-top: 100px;
+	font-size:18px;
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.store-hours-plan-a-visit{
+	margin-top:-122px;
+	margin-left:25px;
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+@media only screen and (max-width: 959px) {
+	.store-hours-plan-a-visit {
+		margin-left: 0px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.store-hours-wrap{
+		width:100%;
+	}
+	.store-hours-plan-a-visit{
+		margin:0px auto;
+	}
+}

@@ -1,0 +1,237 @@
+// -------------------------------------
+//
+//   Product List Module -
+//   Styles for the Product List Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+#products{
+	min-height: 420px;
+	position: relative;
+}
+.lt-ie9 {
+	#products .quick-add {
+		opacity: 1;
+	}
+}
+#products .quick-add {
+	// @include transition-property(opacity);
+ //  	@include transition-duration(.2s);
+ //  	@include transition-timing-function(linear);
+
+	.half .selectboxit-container {
+		width: 100%;
+	}
+}
+.products-list-item .inner{
+	max-width: 220px;
+	margin: 0 auto;
+	position: relative;
+}
+.product-image{
+	border: none;
+	height: 290px;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+.option-value-image{
+	display: none;
+}
+.quick-add{
+	background: $semi-transparent;
+	display: block;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	bottom: -100%;
+	left: 0;
+	text-align: left;
+	z-index: 2;
+	overflow: hidden;
+	select {
+		pointer-events:none;
+	}
+	#product-price, input[name="quantity"]{
+		display: none;
+	}
+	h5{
+		color: $pink;
+		font-size: 12px;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+	.error{
+		color: $black;
+		font-size: 12px;
+	}
+	.variant-options {
+		margin-bottom: 10px;
+	}
+	.variant-options.half{
+		float: left;
+		margin-right: 5%;
+		width: 45%;
+	}
+}
+.lt-ie9 {
+	.quick-add {
+		background: $white;
+	}
+}
+label.color{
+	border: 2px solid $white;
+	border: 2px solid $transparent;
+	float: left;
+	height: 31px;
+	margin: 3px;
+	padding: 1px;
+	position: relative;
+	.name{
+		color: $lightgrey;
+		display: none;
+		background-color: $white;
+		border: 2px solid $green;
+		font-family: $Trocchi;
+		font-size: 10px;
+		padding: 3px 20px;
+		position: absolute;
+		text-align: center;
+		text-transform: lowercase;
+		top: -40px;
+		left: -25px;
+		width: auto;
+
+		img {
+			bottom: -9px;
+			left: 0;
+			margin: 0 auto;
+			position: absolute;
+			right: 0;
+		}
+	}
+	input[type="radio"]{
+		display: none;
+	}
+}
+.product-info{
+	background: $white;
+	min-height: 110px;
+	padding: 15px 12px 0px 12px;
+	text-align: left;
+
+	& > h4 {
+		color: $lightgrey;
+		font-size: 12px;
+		font-weight: bold;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+
+	& > .info {
+		color: $black;
+		font-size: 17px;
+		font-family: $Din;
+		font-weight: normal;
+		line-height: 20px;
+		margin-bottom: 5px;
+	}
+	& > .price {
+		color: $pink;
+		font-family: $Jaf;
+		font-size: 12px;
+	}
+}
+.product-flag {
+	height: 73px;
+	left: 16px;
+	position: absolute;
+	top: -6px;
+	width: 41px;
+	z-index: 1;
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.product-flag-top-rated {
+	background-image: image-url('top-rated.png');
+}
+.product-flag-staff-pick {
+	background-image: image-url('staff-pick.png');
+}
+.product-flag-new-item {
+	background-image: image-url('new-item.png');
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+#products .product-image:hover .quick-add{
+	overflow: visible;
+
+	.selectboxit-container {
+		display: inline-block;
+	}
+}
+.product-info:hover {
+	& > .info {
+		color: $lightgrey;
+	}
+}
+label.color:hover {
+	.name {
+		display: block;
+	}
+}
+label.color.is-checked{
+	border: 2px solid $aqua;
+}
+@media only screen and (max-width: 959px) {
+	.product-image {
+		height: 227px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.product-image {
+		height: 264px;
+	}
+	ul#products > li {
+		width: 200px;
+		margin: 0 5px 20px 5px;
+		float: left;
+	}
+	#products .product-image:hover .quick-add{
+		display: none;
+	}
+	
+}
+@media only screen and (min-width: 0px) and  (max-width: 479px) {
+	ul#products > li {
+		width: 140px;
+		margin: 0 5px 20px 5px;
+		float: left;
+	}
+	.product-image {
+		height: 175px;
+	}
+	.product-info {
+		min-height: 85px;
+		& > h4 {
+			font-size: 7px;
+		}
+		& > a {
+			font-size: 10px;
+			line-height: 12px;
+		}
+		& > .price {
+			font-size: 7px;
+		}
+	}
+	
+}

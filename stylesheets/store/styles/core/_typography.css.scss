@@ -1,0 +1,77 @@
+// -------------------------------------
+//
+//   Typography -
+//   Fonts and Colors
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Headings
+// -------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $Jaf;
+	font-weight: 600;
+	&.din{
+		font-family: $Din;
+		font-weight: 300;
+	}
+	&.pink{
+		color: $pink;
+	}
+	&.aqua{
+		color: $aqua;
+	}
+}
+
+h3.box{
+	border:1px $black solid;
+	display:inline-block;
+	padding:3px 6px;
+}
+
+
+.cta {
+	font-family: $Jaf;
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 15px;
+	text-transform: uppercase;
+}
+.cta-green {
+	background-image: image-url('green-arrow-left.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.cta-blue {
+	background-image: image-url('cta-arrows.png');
+	background-repeat: no-repeat;
+	background-position: left top;
+	display: inline-block;
+	margin-bottom: 15px;
+	padding-left: 35px;
+}
+.cta-blue:hover {
+	color: $pink;
+	background-position: left -24px;
+}
+// -------------------------------------
+//   Utilities
+// -------------------------------------
+.uppercase {
+	text-transform: uppercase;
+}
+.bold{
+	font-weight:bold;
+}
+.error, .is-error{
+	color: $pink;
+	&.flash{
+		color: $white;
+	}
+}
+.paragraph-divide{
+	text-align: center;
+	margin: 40px 0;
+}

@@ -1,0 +1,68 @@
+AjaxPaginate = (function(){
+
+	var paginate = function(targetUL, i, pagContainer, itemClass){
+		var numPages = $(targetUL).data('total-pages');
+		var per_page = <%= Spree::Config[:products_per_page]  %>;
+		addPages(pagContainer, numPages, targetUL);
+		// History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+  //       	 changePage();
+  //   	});
+  		changePage();
+
+	}
+	var changePage = function(){
+		var State = History.getState(); // Note: We are using History.getState() instead of event.state
+        if(State){
+        	$('.page-'+State.data.state).click();
+        } else {
+
+        }
+	}
+	var addPages = function(pagContainer, numPages, targetUL){
+		var list = document.createElement('ul');
+		$(list).addClass('pagination clearfix');
+		var i = 0;
+		var pageTitle = document.title;
+		for(i; i<numPages; i++){
+			var pageLi = document.createElement('li');
+			var pageA = document.createElement('a');
+			$(pageA).text(i+1).attr("href", "#").addClass('pagination-link page-'+(i+1));
+			if (i==0){
+				$(pageA).addClass('active')
+			}
+			$(pageA).click(function(event,i){
+				return function(event){
+					event.preventDefault();
+					alert('click');
+					$(".pagination-link").removeClass("active");
+					$(this).addClass("active");
+					$(".paginate-group").hide();
+					$(".paginate-group-"+(i+1)).show();
+					 History.pushState({state:i+1}, pageTitle, "?page="+(i+1));
+					$('html, body').animate({
+						scrollTop: $(targetUL).offset().top - 50
+					}, 300);
+				}
+			}(event,i));
+			$(pageLi).append(pageA);
+			$(list).append(pageLi);
+		};
+
+		if(numPages > 1){
+			$(pagContainer).append(list);
+		}
+
+	};
+
+	return {
+		initialize: function(){
+			//SET OUR DIFFERENT PAGINATES HERE
+
+			// Products
+			if ($('ul#products').length > 0){
+				paginate('#products', 12, '.pagination-container', '.products-list-item');
+			}
+
+		}
+	};
+}());

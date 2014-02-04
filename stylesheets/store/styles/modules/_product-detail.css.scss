@@ -1,0 +1,223 @@
+// -------------------------------------
+//
+//   Product Detail Module -
+//   Styles for the Product Detail Module
+//
+// -------------------------------------
+.product-detail-left {
+	padding-left: 30px;
+	padding-right: 20px;
+
+	.product-title {
+		font-family: $Din;
+		font-size: 25px;
+		font-weight: normal;
+		margin-bottom: 10px;
+	}
+	.product-brand {
+		color: $lightgrey;
+		font-size: 12px;
+		font-weight: bold;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+	.product-price {
+		color: $pink;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+	.product-properties {
+		background-image: image-url('bg-tape.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 385px;
+		margin-top: 20px;
+		padding: 70px 20px 0 20px;
+
+		& > img {
+			display: block;
+			margin: 0 auto 35px auto;
+			width: 100%;
+		}
+
+		
+
+		.property {
+			padding-left: 10px;
+			margin-bottom: 20px;
+
+			& > h4 {
+				font-size: 12px;
+				font-family: $Jaf;
+				font-weight: bold;
+				text-transform: uppercase;
+				margin-bottom: 0px;
+			}
+		}
+	}
+}
+.product-detail-right {
+	padding-right: 20px;
+	.variant-options {
+		display: inline-block;
+		margin: 0 0 15px 0;
+		width: 100%;
+
+		& > .selectboxit-container {
+			width: 40%;
+			margin: 0;
+		}
+	}
+	.variant-option-type {
+		font-size: 12px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	#option-type_2 {
+		margin-bottom: 15px;
+	}
+	.fit-tip-detail {
+		color: $lightgrey;
+		font-size: 10px;
+		font-family: $Trocchi;
+		margin-bottom: 11px;
+	}
+	.out-of-stock-message {
+		color: $pink;
+		clear: both;
+		display: block;
+		display: none;
+		font-size: 16px;
+		font-family: $Trocchi;
+	}
+
+	#product-price {
+		clear: both;
+	}
+
+	.quantity {
+		display: block;	
+
+		& > input {
+			display: block;
+			margin-bottom: 50px;
+			width: 50px;
+		}
+	}
+	.add-to-cart {
+
+		&.is-disabled {
+			display: none;
+		}
+
+		.buy-it {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+#product-images {
+	width: 100%;
+	margin: 0 auto;
+	#main-image {
+		border: none;
+		height: 500px;
+	}
+}
+
+#product-thumbnails {
+	margin-top: 20px;
+	& > li {
+		height: 50px;
+		width: 39px;
+		margin: 0 5px;
+		overflow: hidden;
+		a {
+			display: block;
+			height: 100%;
+
+			img {
+				display: block;
+				height: 100%;
+				margin: 0 auto;
+				width: auto;
+			}
+		}
+	}
+	& > li.selected {
+		outline: 2px solid $pink;
+	}
+}
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.product-detail-right-gift-card {
+	input,textarea {
+		width: 100%;
+	}
+	.button {
+		margin-bottom: 20px;
+	}
+}
+.similar-products {
+	margin-bottom: 20px;
+}
+.related_item{
+	border-bottom: $grey 2px solid;
+	padding: 10px 0;
+	&:last-child{
+		border-bottom: none;
+	}
+	a{
+		color: $black;
+		display: block;
+		img {
+			float: left;
+			margin-right: 10px;
+		}
+		div {
+			float: left;
+			font-weight: bold;
+			font-family: $Jaf;
+			width: 80px;
+		}
+		&:hover {
+			color: $green;
+		}
+	}
+}
+// -------------------------------------
+//   States
+// -------------------------------------
+@media only screen and (min-width: 767px) and (max-width: 959px) {
+	.product-detail-left .product-properties {
+		height: 290px;
+	}
+	#product-images #main-image {
+		height: auto;
+	}
+}
+@media only screen and (max-width: 767px) {
+	#product-images {
+		width: 300px;
+	}
+	.product-properties {
+		width: 260px;
+		margin: 20px auto 0 auto;
+	}
+	.add-to-cart {
+		button {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.social-share-product {
+		text-align: center;
+	}
+}

@@ -1,0 +1,81 @@
+.buy-for-her-header.l-center{
+	text-align:center;
+	margin-bottom:40px;
+	img{
+		width:100%;
+	}
+}
+.lesson{
+	h3{
+		text-align:right;
+		background: image-url('lesson-arrow.png') no-repeat right;
+		padding:5px 28px;
+		color:$white;
+	}
+}
+.buy-for-her-list{ 
+	li{
+		padding:0px 0px 25px 25px;
+	}
+	h3{
+		padding-right:5px;
+	}
+	h3,p{
+		display:inline;
+	}
+}
+.buy-for-her-product{
+	margin-left:15px;
+	li{
+		width:200px;
+		margin:5px;
+		display:inline-block;
+		vertical-align: top;
+		img{
+			width:100%;
+		}
+	}
+}
+.buy-for-her-extra{
+	border: 2px #8fc2bc solid;
+	color:#8fc2bc;
+	float:right;
+	padding:3px 6px;
+	display:inline-block;
+
+}
+.buy-for-her-shop-btn{
+	margin-top:20px;
+}
+@media only screen and (max-width: 767px) {
+
+	.lesson h3{
+		background-position: left;
+		text-align:left;
+		padding:5px 13px;
+		margin-bottom:15px;
+	}
+	h1{
+		text-align: left;
+	}
+	.buy-for-her-product{
+		margin:0px;
+	}
+	
+	p{
+		text-align: left;
+	}
+}
+@media only screen and (max-width: 767px) {
+.buy-for-her-product li{
+		width:46%;
+
+	h3{
+		text-align: left;
+	}
+}
+.buy-for-her-extra{
+		float:left;
+		margin-bottom:15px;
+	}
+}

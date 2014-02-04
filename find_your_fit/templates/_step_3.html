@@ -1,0 +1,39 @@
+<div class="container bg-white">
+	<div class="fade-out">
+	<div class="clearfix">
+		<div class="fitfinder-mobile-nav">
+			<div class="fitfinder-mobile-number fitfinder-mobile-number-three"></div>
+			<%= image_tag('ff-mobile-q-2.png') %>
+		</div>
+		<div class="five columns model-container">
+			<%= image_tag('fit-step2-a.png', :data => { :left => "-200px"}, :class => "slide-in-left model-img model-img-a model-img-show") %>
+			<%= image_tag('fit-step2-b.png', :data => { :left => "-200px"}, :class => "slide-in-left model-img model-img-b") %>
+			<%= image_tag('fit-step2-c.png', :data => { :left => "-200px"}, :class => "slide-in-left model-img model-img-c") %>
+		</div>
+		<div class="seven columns">
+			<div class="six columns step-question l-vert-pad-step mobile-hide">
+				<%= image_tag('fitfinder-step-2.png') %>
+			</div>
+			<div class="five columns offset-by-two">
+				<form class="step-form radio-bg radio-bg-vert radio-bg-vert-3">
+					<input id="radio-1" name="1" type="radio" data-img="c" data-band="-2" data-cup="0">
+					<div class="radio-label radio-label-p3" data-button="radio-1">It rides up a lot</div>
+					<input id="radio-2" name="1" type="radio" data-img="b" data-band="-1" data-cup="0">
+					<div class="radio-label radio-label-p1" data-button="radio-2">It rides up a little</div>
+					<input id="radio-3" name="1" type="radio" data-img="a" data-band="0" data-cup="0" checked>
+					<div class="radio-label radio-label-g2" data-button="radio-3">Low and parallel</div>
+				
+					<button class="button step-submit" type="submit">Next<div class="button-tag button-tag-right button-tag-pink"></div></button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="l-full clearfix fit-tip">
+		<div class="alpha four columns offset-by-seven">
+			<%= image_tag('fit-tip.png') %>
+			<p>Your band should be parallel to the ground and sit low on your back. If your band is riding up, it is likely too big.</p>
+		</div>
+	</div>
+	<a class="button step-back" href="#"><div class="button-tag button-tag-right button-tag-green"></div>Prev</a>
+	</div>
+</div>

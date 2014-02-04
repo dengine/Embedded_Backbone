@@ -1,0 +1,148 @@
+// -------------------------------------
+//
+//   Meet the Staff Module -
+//   Styles for the Meet the Staff Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.staff-nameplate {
+	background-image: image-url('staff-nameplate.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 149px;
+	left: 0;
+	top: -75px;
+	position: absolute;
+	z-index: 3;
+
+	h3 {
+		color: $white;
+		font-family: $Trocchi;
+		line-height: 149px;
+		text-align: center;
+	}
+}
+.staff-details {
+	display: none;
+	padding-top: 75px;
+}
+.staff-detail {
+	margin-bottom: 10px;
+	label {
+		display: inline-block;
+		width: 35%;
+		text-align: right;
+		padding-right: 1%;
+		vertical-align: text-top;
+	}
+	p {
+		display: inline-block;
+		width: 64%;
+		text-align: left;
+		vertical-align: text-top;
+	}
+}
+.staff-information {
+	margin-bottom: 135px;
+	z-index: 100;
+}
+.staff-carousel {
+	overflow: hidden;
+	padding-left: 65px;
+}
+.staff-employees {
+	left: 65px;
+	position: absolute;
+}
+.staff-carousel-button {
+	background-image: image-url('staff-carousel-buttons.png');
+	background-repeat: no-repeat;
+	height: 92px;
+	position: absolute;
+	top: 210px;
+	width: 42px;
+	z-index: 2;
+}
+.staff-pic {
+	cursor: pointer;
+	opacity: .2;
+	position: absolute;
+	width: 270px;
+	text-align: center;
+	top: 100px;
+	@include transition(opacity .5s linear);
+	z-index: 1;
+}
+.staff-pic.clicked {
+	opacity: 1;
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+.staff-carousel-button-left {
+	left: 0;
+	background-position: left top;
+}
+.staff-carousel-button-right {
+	right: 0;
+	background-position: right top;
+}
+.staff-pic:hover {
+	opacity: .5;
+}
+.staff-pic.clicked:hover {
+	opacity: 1;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.staff-nameplate {
+		height: 140px;
+		top: -70px;
+		h3 {
+			line-height: 140px;
+		}
+	}
+}
+@media only screen and (max-width: 759px) {
+	.staff-employees {
+		left: 40px;
+	}
+	.staff-detail {
+		p, label {
+			display: block;
+			text-align: left;
+			width: 100%;
+		}
+	}
+}
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+	.staff-nameplate {
+		height: 100px;
+		top: -50px !important;
+		h3 {
+			line-height: 100px;
+		}
+	}
+}
+@media only screen and (max-width: 480px) {
+	.staff-employees {
+		left: 0px;
+	}
+	.staff-nameplate {
+		height: 100px;
+		top: -50px !important;
+		h3 {
+			line-height: 100px;
+		}
+	}
+}	

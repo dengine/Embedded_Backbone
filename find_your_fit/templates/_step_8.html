@@ -1,0 +1,37 @@
+<div class="container bg-white">
+	<div class="fade-out">
+	<div class="clearfix">
+		<div class="fitfinder-mobile-nav">
+			<div class="fitfinder-mobile-number fitfinder-mobile-number-eight"></div>
+			<%= image_tag('ff-mobile-q-7.png') %>
+		</div>
+		<div class="four columns model-container model-top model-container-ipad-top l-vert-pad-step">
+			<%= image_tag('fit-step7-a.png', :class => "slide-in-left model-img model-img-a model-img-show") %>
+			<%= image_tag('fit-step7-b.png', :class => "slide-in-left model-img model-img-b") %>
+			<%= image_tag('fit-step7-c.png', :class => "slide-in-left model-img model-img-c") %>
+		</div>
+		<div class="six columns step-question l-vert-pad-step mobile-hide">
+			<%= image_tag('fitfinder-step-7.png') %>
+		</div>
+		<div class="eight columns">
+			<form class="step-form radio-bg radio-bg-horz radio-bg-horz-3 radio-bg-horz-3-tall clearfix">
+				<input id="radio-1" name="1" type="radio" data-img="a" data-band="0" data-cup="0" checked>
+				<div class="radio-label radio-label-g2 two columns omega" data-button="radio-1">Nope, no underwire pain here</div>
+				<input id="radio-2" name="1" type="radio" data-img="b" data-band="-1" data-cup="1">
+				<div class="radio-label radio-label-p1 four columns alpha omega" data-button="radio-2">Yeah, it causes a little bit of pain</div>
+				<input id="radio-3" name="1" type="radio" data-img="c" data-band="-2" data-cup="2">
+				<div class="radio-label radio-label-p3 two columns alpha" data-button="radio-3">It hurts so bad I can barely keep my bra on!</div>
+
+				<button class="button step-submit" type="submit">Next<div class="button-tag button-tag-right button-tag-pink"></div></button>
+			</form>
+		</div>
+	</div>
+	<div class="l-full clearfix fit-tip">
+		<div class="alpha six columns offset-by-five">
+			<%= image_tag('fit-tip.png') %>
+			<p>One way to judge your fit is to push on your underwire with you fingers. If it feels firm, that means it’s sitting on your rib cage, and that’s good! If it feels like it’s sitting on soft tissue, your cup is too small and it’s likely causing you pain and risks to your health.</p>
+		</div>
+	</div>
+	<a class="button step-back" href="#"><div class="button-tag button-tag-right button-tag-green"></div>Prev</a>
+	</div>
+</div>

@@ -1,0 +1,78 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Sidenav Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+	#sidebar {
+		margin-top: 75px;
+	}
+	.sidenav {
+		margin-bottom: 20px;
+		@include border-radius(3px);
+		overflow: hidden;
+		ul {
+			background-image: image-url('sidenav-bar.png');
+			background-position: 7px top;
+			background-repeat: repeat-y;
+
+			& > li {
+				margin-bottom: 10px;
+
+				a,.sidenav-item {
+					color: #808080;
+					font-size: 12px;
+					padding: 0 0 0 20px;
+				}
+			}
+		}
+	}
+	
+
+	.sidenav-item {
+			color: #808080;
+			font-size: 12px;
+			padding: 0 0 0 20px;
+		}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+.sidenav .current {
+	background-image: image-url('sidenav-active-arrow.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	font-weight: bold;
+}
+.sidenav ul > li a:hover, .sidenav ul > li .sidenav-item:hover {
+	color: $black;
+}
+@media only screen and (max-width: 767px) {
+	#sidebar {
+		margin-top: 0px;
+	}
+	.sidenav ul {
+		background-image: none;
+	}
+	.sidenav ul > li, .sidenav ul > li {
+		text-align: left;
+		display: none;
+		&.current {
+			background-image: none;
+			display: block;
+		}
+	}
+	.sidenav ul > li a, .sidenav ul > li .sidenav-item {
+		color: $black;
+	}
+}

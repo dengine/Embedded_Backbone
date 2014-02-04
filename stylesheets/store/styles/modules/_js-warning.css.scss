@@ -1,0 +1,39 @@
+// -------------------------------------
+//
+//   Product Detail Module -
+//   Styles for the Product Detail Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.js-warning{
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	text-align: center;
+	z-index: 100;
+	.inner{
+		background: $white;
+		margin-top: 100px;
+		padding: 20px;
+	}
+}
+.js .js-warning{
+	display: none;
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+

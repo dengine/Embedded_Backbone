@@ -1,0 +1,25 @@
+<div id="fitfinder">
+	<div class="bg-purple">
+		<div class="container fitfinder-page fitfinder-page-intro bg-fitfinder l-vert-pad">
+
+			<div class="loader">
+				<%= image_tag('Loading-2.png') %>
+				<h1><span class="percentage-loaded"></span>%</h1>
+			</div>
+			<%= image_tag('fitfinder-wood.png', :class => "img-wood") %>
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+<% if spree_current_user.present? && spree_current_user.band_size.present? && spree_current_user.cup_size.present? %>
+	var band_size = '<%= spree_current_user.band_size %>'
+	var cup_size = '<%= spree_current_user.cup_size %>'
+<% else %>
+	var band_size = '32';
+	var cup_size = 'C';
+<% end %>
+</script>
+<%= render :partial => 'templates' %>

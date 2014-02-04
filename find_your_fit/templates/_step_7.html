@@ -1,0 +1,34 @@
+<div class="container bg-white">
+	<div class="fade-out">
+	<div class="clearfix">
+		<div class="fitfinder-mobile-nav">
+			<div class="fitfinder-mobile-number fitfinder-mobile-number-seven"></div>
+			<%= image_tag('ff-mobile-q-6.png') %>
+		</div>
+		<div class="four columns model-container model-container-slim">
+			<%= image_tag('fit-step6-a.png', :class => "slide-in-left model-img model-img-a model-img-show") %>
+			<%= image_tag('fit-step6-b.png', :class => "slide-in-left model-img model-img-b") %>
+		</div>
+		<div class="six columns step-question l-vert-pad-step mobile-hide">
+			<%= image_tag('fitfinder-step-6.png') %>
+		</div>
+		<div class="six columns">
+			<form class="step-form radio-bg radio-bg-curve">
+				<input id="radio-1" name="1" type="radio" data-img="a" data-band="0" data-cup="0" checked>
+				<div class="radio-label radio-label-g2" data-button="radio-1">No, they sit comfortably on my shoulders</div>
+				<input id="radio-2" name="1" type="radio" data-img="b" data-band="-1" data-cup="1">
+				<div class="radio-label radio-label-p3 curve-indent" data-button="radio-2">Yes, even though I've tightened them</div>
+
+				<button class="button step-submit" type="submit">Next<div class="button-tag button-tag-right button-tag-pink"></div></button>
+			</form>
+		</div>
+	</div>
+	<div class="l-full clearfix fit-tip">
+		<div class="alpha six columns offset-by-five">
+			<%= image_tag('fit-tip.png') %>
+			<p>If the straps are falling down, it’s often a sign that your band is too big, and thus not providing enough support. When this happens, more of the weight of the bust is carried by your straps.</p>
+		</div>
+	</div>
+	<a class="button step-back" href="#"><div class="button-tag button-tag-right button-tag-green"></div>Prev</a>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+<div class="container bg-white">
+	<div class="fade-out">
+	<div class="clearfix">
+		<div class="fitfinder-mobile-nav">
+			<div class="fitfinder-mobile-number fitfinder-mobile-number-two"></div>
+			<%= image_tag('ff-mobile-q-4.png') %>
+		</div>
+		<div class="four columns model-container model-top">
+			<%= image_tag('fit-step-2new.png', :class => "slide-in-left model-img-static") %>
+		</div>
+		<div class="six columns offset-by-one step-question l-vert-pad-step mobile-hide">
+			<%= image_tag('fitfinder-step-2new.png') %>
+		</div>
+		<div class="six columns offset-by-one">
+			<p class="static-text">*Keep the measuring tape parallel to the ground and measure around your bra directly under the bust. Pull the measuring tape tight and round up to the nearest even whole number in inches below:</p>
+			<div class="bra-size bra-size-center clearfix">
+				<div class="bra-dial bra-dial-bands bra-dial-center">
+					<button class="bra-dial-button bra-dial-button-plus"></button>
+					<div class="bra-dial-case-container">
+						<%= image_tag('fitfinder-dial-case.png', :class => 'dial-case') %>
+						<ul class="bra-dial-sizes bra-dial-sizes-bands">
+							{{#each bands}}
+								<li data-value="{{this}}">{{this}}</li>
+							{{/each}}
+						</ul>
+					</div>
+					<button class="bra-dial-button bra-dial-button-minus"></button>
+				</div>
+			</div>
+		</div>
+		<form class="bra-size">
+			<div class="bands-list">
+				{{#each bands}}
+					<input type="radio" name="2" data-band="{{this}}">
+				{{/each}}
+			</div>
+		<button class="button step-submit" type="submit">Next<div class="button-tag button-tag-right button-tag-pink"></div></button>
+		</form>
+	</div>
+	<div class="l-full clearfix fit-tip">
+		<div class="alpha five columns offset-by-six">
+			<a href="<%= asset_path('tapeMeasures.pdf') %>"><img src="<%= asset_path('download-ruler.png') %>"></a>
+			<p>Don't have a tape measure at home? Download our printable measuring tape to continue your fitting.</p>
+		</div>
+	</div>
+	<a class="button step-back" href="#"><div class="button-tag button-tag-right button-tag-green"></div>Prev</a>
+	</div>
+</div>

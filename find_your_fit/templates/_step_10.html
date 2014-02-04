@@ -1,0 +1,40 @@
+<div class="container bg-white">
+	<div class="fade-out">
+	<div class="fitfinder-mobile-nav">
+		<div class="fitfinder-mobile-number fitfinder-mobile-number-ten"></div>
+		<%= image_tag('ff-mobile-q-9.png') %>
+	</div>
+	<div class="six columns step-question l-center l-vert-pad-step mobile-hide">
+		<%= image_tag('fitfinder-step-9.png') %>
+	</div>
+	<div class="clearfix">
+		<div class="l-full bra-container">
+			<div class="bands">
+				<%= image_tag('fit-step9-a.png', :class => "slide-in-left model-img model-img-c") %>
+				<%= image_tag('fit-step9-b.png', :class => "slide-in-left model-img model-img-b model-img-show") %>
+				<%= image_tag('fit-step9-c.png', :class => "slide-in-left model-img model-img-a ") %>
+			</div>
+			<form class="form-complete radio-bra offset-by-four clearfix">
+				<div class="bra-select-text mobile-hide">Select One:</div>
+				<input id="radio-3" name="1" type="radio" data-img="c" data-band="0" data-cup="0" data-option="C">
+				<div class="radio-label radio-label-bra-3 radio-label-no-text" data-button="radio-3">3</div>
+				<input id="radio-2" name="1" type="radio" data-img="b" data-band="0" data-cup="0" data-option="B" checked>
+				<div class="radio-label radio-label-bra-2 radio-label-no-text" data-button="radio-2">2</div>
+				<div class="radio-label radio-label-bra-1 radio-label-no-text" data-button="radio-1">1</div>
+				<input id="radio-1" name="1" type="radio" data-img="a" data-band="0" data-cup="0" data-option="A">
+				
+				
+			
+				<button class="button step-submit" type="submit">Next<div class="button-tag button-tag-right button-tag-pink"></div></button>
+			</form>
+		</div>
+	</div>
+	<div class="l-full clearfix fit-tip">
+		<div class="alpha seven columns l-center">
+			<%= image_tag('fit-tip.png') %>
+			<p>When your bra is new, you should be able to fasten it on the loosest hook. This way, as it stretches over time, you have room to tighten it. If your bra is only comfortable on the tightest hook, it’s either the wrong size or old and stretched out.</p>
+		</div>
+	</div>
+	<a class="button step-back" href="#"><div class="button-tag button-tag-right button-tag-green"></div>Prev</a>
+	</div>
+</div>

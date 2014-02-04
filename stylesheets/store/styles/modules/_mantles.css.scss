@@ -1,0 +1,163 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Mantles Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.mantle {
+	position: relative;
+	z-index: 45;
+	& > .container {
+		height: 100%;
+	}
+}
+.mantle-text {
+	z-index: 1;
+	margin: auto;
+	height: auto;
+	right: 0;
+	left: 0;
+}
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.mantle-text-offset {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: -45px;
+}
+.mantle-text-offset-visit {
+	bottom: -61px;
+	margin: 0;
+	left: auto;
+}
+.black-mantle {
+	height: 250px;
+	background-color: #212020;
+	background-image: image-url('black-mantle.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	.about-mantle {
+		@include background-image-retina('about-us-mantle-text','png', 100%,auto);
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: center  bottom;
+		z-index: 1;
+	}
+	.plan-a-visit-mantle{
+		@include background-image-retina('plan-a-visit-mantle-text','png', 100%,auto);
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: left  bottom;
+		z-index: 1;
+	}
+	.boobtalk-mantle{
+		@include background-image-retina('boob-talk-mantle-text','png', 100%,auto);
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-position: center 3px;
+		bottom: -46px;
+		height: 230px;
+		position: absolute;
+		z-index: 1;
+	}
+}
+.meet-staff-mantle {
+	height: 450px;
+	background-image: image-url('staff-mantle.png');
+	background-repeat: repeat-x;
+}
+
+.blue-mantle {
+	background-color: #82bfbd;
+	background-image: image-url('blue-mantle.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	.customer-comments-mantle{
+		background-image: image-url('customer-comments-mantle.png');
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: contain;
+		height: 250px;
+		z-index: 1;
+		margin-top: 50px;
+	}
+}
+.blue-mantle-reverse{
+	background-color: #82bfbd;
+	background-image: image-url('blue-mantle-reverse.png');
+	background-position: center top;
+	padding:50px 0 15px 0;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.black-mantle {
+		height: 200px;
+		.boobtalk-mantle{
+			background-position: center 39px;
+		}
+		.plan-a-visit-mantle{
+			background-position: center 51px;
+		}
+	}
+	.blue-mantle {
+		.customer-comments-mantle{
+			height: 215px;
+		}
+	}
+	
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+	.black-mantle {
+		.mantle-text-offset-visit {
+			bottom: -46px;
+			margin: 0;
+			left: auto;
+		}
+		.boobtalk-mantle{
+			background-position: center 103px;
+		}
+		.plan-a-visit-mantle{
+			background-position: center 19px;
+		}
+	}
+}
+@media only screen and (max-width: 480px) {
+	.black-mantle {
+		.mantle-text-offset-visit {
+			bottom: -33px;
+			margin: 0;
+			left: auto;
+		}
+		.boobtalk-mantle{
+			background-position: center 126px;
+		}
+		.plan-a-visit-mantle{
+			background-position: center 43px;
+		}
+	}
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+@media only screen and (max-width: 767px) {
+	.black-mantle {
+		height: 100px;
+	}
+	.blue-mantle {
+		.customer-comments-mantle{
+			height: 105px;
+		}
+	}
+}

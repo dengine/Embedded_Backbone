@@ -1,0 +1,103 @@
+// -------------------------------------
+//
+//   Videos Module -
+//   Styles for the Example Module
+//
+// -------------------------------------
+
+// Responsive videos
+.youtube-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+.youtube-container iframe,
+.youtube-container object,
+.youtube-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-carousel{
+	padding-top: 30px;
+
+}
+.more-videos{
+	background: image-url('film-strip.jpg') repeat-y;
+	background-size: 100%;
+	height: 602px;
+	margin: 0 auto 40px;
+	max-width: 220px;
+	padding: 15px 35px 0;
+	.poster-window{
+		max-height: 500px;
+		margin-bottom: 5px;
+		overflow: hidden;
+	}
+	.viewport{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	.video{
+		cursor: pointer;
+		margin-bottom: 10px;
+		opacity: .8;
+		position: relative;
+		height: 118px;
+		width: 100%;
+		img{
+			border: 2px solid $black;
+			&.active{
+				border: 2px solid $pink;
+			}
+		}
+		.title{
+			color: $white;
+			font-family: $Din;
+			font-size: 16px;
+			line-height: 18px;
+			padding: 0 20px;
+			position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			text-align: center;
+		}
+	}
+	.scroll{
+		color: $aqua;
+		font-family: $Din;
+		font-size: 18px;
+		line-height: 25px;
+		text-align: center;
+		a{
+			display: block;
+			opacity: 0.3;
+			text-align: center;
+			&.active{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+.more-videos .video:hover {
+	opacity: 1;
+}

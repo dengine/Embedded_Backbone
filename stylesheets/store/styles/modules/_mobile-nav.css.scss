@@ -1,0 +1,128 @@
+.mobile-social{
+	display:none;
+	float:left;
+	margin:22px 20px;
+}
+.mobile-fb, .mobile-tw{
+	height:23px;
+	width:21px;
+	display:inline-block;
+}
+.mobile-fb{
+	background: image-url('mobile-fb.png') no-repeat;
+	margin-right:15px;
+}
+.mobile-tw{
+	background: image-url('mobile-tw.png') no-repeat;
+}
+.mobile-nav-close{
+	float:right;
+}
+.mobile-nav{
+	display:none;
+}
+.mobile-header {
+	background: $black;
+}
+.mobile-menu a{
+	font-family: $Jaf;
+	background-color: $pink;
+	text-align:center;
+	color:$white;
+	font-size:16px;
+	width:100%;
+	display:block;
+	height:45px;
+	padding:12px;
+}
+.mobile-dropdown{
+	width:75%;
+	position:fixed;
+	left:-75%;
+	height:100%;
+	overflow-x:hidden;
+	z-index: 9999;
+}
+.mobile-dropdown header{
+	background:$green;
+	font-family:$Jaf;
+	color:$white;
+	padding:10px;
+	font-size:16px;
+	height:45px;
+}
+.mobile-nav-bar li{
+	display:block;
+	height:50px;
+}
+.mobile-nav-bar > li > a{
+	color:$pink;
+	font-size:16px;
+	display:block;
+	width:100%;
+	padding:10px 20px;
+}
+.mobile-nav-bar .mobile-sub a{
+	font-family:$Jaf;
+	color:$grey;
+	font-size:14px;
+	display:block;
+	width:100%;
+	padding:10px 30px;
+}
+.mobile-nav-shop-sub{
+	position:absolute;
+	top:0px;
+	right:-100%;
+	width:100%;
+	height:100%;
+}
+
+// --------------------------------------
+//   Media Queries
+// --------------------------------------
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+@media only screen and (max-width: 767px) {
+	
+	.mobile-nav{
+		display:block;
+		
+	}
+
+	.navigation{
+	}
+	.mobile-menu{
+		display:block;
+	}
+	.mobile-social{
+		display:block;
+	}
+	.mobile-bag{
+		position: absolute;
+		right: 30px;
+		top: 60px;
+	}
+	.mobile-bag a{
+		background: url(/assets/cart-bag.png) repeat-x;
+		height: 38px;
+		width: 28px;
+		padding: 13px 7px 0 0;
+		display: block;
+		font-family: $Din;
+		font-size: 16px;
+		color: $black;
+		text-align: center;
+	}
+	.logo{
+		background: image-url('logo-320.png') no-repeat;
+		width:121px;
+		height:46px;
+		display:block;
+		margin: 15px auto 0 auto;
+	}
+
+}

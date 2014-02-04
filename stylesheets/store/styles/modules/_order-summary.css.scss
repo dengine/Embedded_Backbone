@@ -1,0 +1,53 @@
+// -------------------------------------
+//
+//   Order Summary Module -
+//   Styles for the Order Summary Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+#checkout-summary {
+	table {
+		border: none;
+		margin-bottom: 0;
+
+		td {
+			color: $black;
+			border-right: none;
+			font-weight: bold;
+			text-align: left;
+			font-family: $Jaf;
+			&.order-total {
+
+				&.order-total-pink {
+					color: $pink;
+				}
+			}
+
+		}
+		tr {
+			td:first-child {
+				font-family: $Trocchi;
+			}
+		}
+		.total-row {
+			td:first-child {
+				font-family: $Jaf;
+			}
+		}
+	}
+}
+.total-row {
+	font-family: $Jaf;
+	text-transform: uppercase;
+}
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// -------------------------------------
+//   States
+// -------------------------------------

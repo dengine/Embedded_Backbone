@@ -1,0 +1,90 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Example Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+// Responsive videos
+.social-stream {
+	background: $white;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 510px;
+    overflow: hidden;
+    &.dark{
+    	height: 463px;
+		background: #323232;
+	}
+}
+ 
+.social-stream iframe,
+.social-stream object,
+.social-stream embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#social-pane{
+	background: $pink;
+	padding: 50px 20px 0;
+	position: fixed;
+		top: 0;
+		left: -315px;
+		bottom: 0;
+	width: 320px;
+	z-index: 200;
+}
+#social-tab{
+	cursor: pointer;
+	height: 87px;
+	position: absolute;
+		top: 100px;
+		right: -45px;
+	width: 45px;
+	background: url(/assets/social-tab2.png) no-repeat;
+	img{
+		display: block;
+		margin: 0;
+		&:hover{
+			opacity: 0.6;
+		}
+	}
+}
+.social-widget{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+.social-close {
+	display: none;
+	color: $white;
+	font-family: $Din;
+	font-size: 18px;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px) {
+	#social-tab {
+		display: none;
+	}
+	.social-close {
+		display: block;
+	}
+}
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------

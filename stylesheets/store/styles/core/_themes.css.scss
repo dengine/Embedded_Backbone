@@ -1,0 +1,36 @@
+// -------------------------------------
+//
+//   Themes
+//
+// -------------------------------------
+.bg-white {
+	background-color: $white;
+}
+.bg-blue {
+	background-image: image-url("bg-blue.png");
+	background-repeat: repeat;
+}
+.bg-purple {
+	background-color: #31202b;
+	background-image: image-url("bg-purple.png");
+	background-repeat: repeat-x;
+}
+.bg-purple-results {
+	background-color: #31202b;
+	background-image: image-url("bg-purple-results.png");
+	background-repeat: repeat-x;
+}
+.bg-fitfinder{
+	background-image: image-url("bg-fitfinder.png");
+	background-repeat: no-repeat;
+}
+.bg-black {
+	background-color: $black;
+}
+.bg-lightgrey {
+	background-color: $lightestgrey;
+}
+.border-radius-shadow {
+	@include border-radius(3px);
+	@include single-box-shadow(rgba(0,0,0,.2), 0px, 0px, 5px, 0px, false);
+}

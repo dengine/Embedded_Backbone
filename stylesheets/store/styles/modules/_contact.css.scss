@@ -1,0 +1,65 @@
+// -------------------------------------
+//
+//   Contact Module Module -
+//   Styles for the Contact Module Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.contact-dialog {
+	background-image: image-url('postcard-border.png');
+	background-size: 100% 100%;
+	background-position: top left;
+	background-repeat: no-repeat;
+	padding-top: 45px;
+	padding-bottom: 30px;
+
+	.postage-stamp {
+		height: 86px;
+		img {
+			
+		}
+	}
+}
+.contact-column {
+	input, textarea {
+		width: 100%;
+	}
+	textarea {
+		height: 117px;
+	}
+}
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.contact-column-left {
+	padding-left: 40px;
+}
+.contact-column-right {
+	padding-right: 40px;
+}
+.contact-column-float-right {
+	float: right;
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+.lt-ie9 {
+	.contact-dialog {
+		background-image: none;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.contact-dialog {
+		background-image: none;
+	}
+	.contact-column-left, .contact-column-right {
+		padding: 15px;
+	}
+}

@@ -1,0 +1,57 @@
+<% templates = [
+	{
+		file: 'spree/find_your_fit/templates/intro',
+		id: 'intro'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_1',
+		id: 'step_1'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_2',
+		id: 'step_2'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_3',
+		id: 'step_3'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_4',
+		id: 'step_4'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_5',
+		id: 'step_5'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_6',
+		id: 'step_6'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_7',
+		id: 'step_7'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_8',
+		id: 'step_8'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_9',
+		id: 'step_9'
+	},
+	{
+		file: 'spree/find_your_fit/templates/step_10',
+		id: 'step_10'
+	},
+	{
+		file: 'spree/find_your_fit/templates/result',
+		id: 'result'
+	}
+
+
+] %>
+<% templates.each do |t| %>
+	<script id="<%= t[:id] %>" type="text/x-handlebars-template">
+		<%= render :partial => t[:file] %>
+	</script>
+<% end %>

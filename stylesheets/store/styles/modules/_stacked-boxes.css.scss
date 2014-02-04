@@ -1,0 +1,55 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Stacked Boxes Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+.stacked-boxes {
+
+}
+.stacked-box {
+	display: block;
+	position: relative;
+	height: 205px;
+	width: 100%;
+	img{
+		position: absolute;
+			top: 0;
+			left: 0;
+	}
+	&:hover{
+		opacity: 0.7;
+	}
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+img.customers{
+	left: -8px;
+}
+img.newsletter{
+	left: -2px;
+}
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+.stacked-boxes-center {
+	.stacked-box > img {
+		left: -115px;
+		margin-left: 50%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.stacked-box {
+		height: 140px;
+	}
+}

@@ -1,0 +1,44 @@
+#image-404{
+	background: image-url('404-image.png') no-repeat;
+	height: 800px;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	width: 470px;
+}
+.container-404 {
+	height: 800px;
+	float: left;
+}
+.errorExplanation{
+	background: none;
+	color: $black;
+	text-align: center;
+	h2{
+		color: $pink;
+	}
+	ul{
+		margin-left: 0;
+		list-style: none;
+	}
+}
+@media only screen and (max-width: 959px) {
+	#image-404 {
+		left: -50px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	#image-404{
+		background: image-url('404-image-small.png') no-repeat;
+		height: 280px;
+		width: 120px;;
+		top: 117px;
+		left: 0;
+	}
+	.container-404 {
+		height: 280px;
+	}
+	.message-404{
+		padding-left: 100px;
+	}
+}

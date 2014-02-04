@@ -1,0 +1,52 @@
+<div class="container bg-white">
+	<div class="fade-out">
+	<div class="seven columns l-center step-question l-vert-pad-step">
+		<div class="fitfinder-mobile-nav">
+			<div class="fitfinder-mobile-number fitfinder-mobile-number-one"></div>
+			<%= image_tag('ff-mobile-q-1.png') %>
+		</div>
+		<%= image_tag('fitfinder-step-1.png', :class => 'mobile-hide') %>
+		<div class="bra-dials-container">
+			<div class="bra-dials clearfix">
+				<div class="bra-dial bra-dial-bands">
+					<button class="bra-dial-button bra-dial-button-plus"></button>
+					<div class="bra-dial-case-container">
+						<%= image_tag('fitfinder-dial-case.png', :class => 'dial-case') %>
+						<ul class="bra-dial-sizes bra-dial-sizes-bands">
+							{{#each bands}}
+								<li data-value="{{this}}">{{this}}</li>
+							{{/each}}
+						</ul>
+					</div>
+					<button class="bra-dial-button bra-dial-button-minus"></button>
+				</div>
+				<div class="bra-dial bra-dial-cups">
+					<button class="bra-dial-button bra-dial-button-plus"></button>
+					<div class="bra-dial-case-container">
+						<%= image_tag('fitfinder-dial-case.png', :class => 'dial-case') %>
+						<ul class="bra-dial-sizes bra-dial-sizes-cups">
+							{{#each cups}}
+								<li data-value="{{this}}">{{this}}</li>
+							{{/each}}
+						</ul>
+					</div>
+					<button class="bra-dial-button bra-dial-button-minus"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form class="bra-size">
+		<div class="cups-list">
+			{{#each cups}}
+				<input type="radio" name="1" data-cup="{{this}}">
+			{{/each}}
+		</div>
+		<div class="bands-list">
+			{{#each bands}}
+				<input type="radio" name="2" data-band="{{this}}">
+			{{/each}}
+		</div>
+	<button class="button step-submit" type="submit">Next<div class="button-tag button-tag-right button-tag-pink"></div></button>
+	</form>
+	</div>
+</div>

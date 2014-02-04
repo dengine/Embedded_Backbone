@@ -1,0 +1,47 @@
+// -------------------------------------
+//
+//   Settings -
+//   @Font-Face Declarations, Variables
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+@font-face {
+  font-family: 'Trocchi';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Trocchi'), url(https://themes.googleusercontent.com/static/fonts/trocchi/v1/FxnVMeU6MpRiIW8IbIEcBwLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+$Trocchi: 'Trocchi', Georgia, sans-serif;
+$Jaf: "jaf-facitweb",Helvetica, Arial, sans-serif, sans-serif;
+$Din: "din-condensed-web",Helvetica, Arial, sans-serif, sans-serif;
+
+// ----- Base Colors ----- //
+$white: #FFFFFF;
+$black: #323232;
+$grey: #c4c4c4;
+$green: #89bcb6;
+$lightgrey: #ababab;
+$lightestgrey: #f3f2ee;
+$bordergrey: #dddddd;
+$pink: #f2507e;
+$aqua: #92ccca;
+$semi-transparent: rgba(255,255,255,0.8);
+$transparent: rgba(255,255,255,0);
+// ----- Base Borders & Box Shadows ----- //
+$pink-dash: 2px dashed $pink;
+$white-dotted: 2px dotted $white;
+// ----- Base Content ----- //
+
+// ----- Base Layout ----- //
+
+// ----- Content ----- //
+
+// ----- Layout ----- //

@@ -1,0 +1,65 @@
+/* Elastislide Style */
+.es-carousel-wrapper{
+	background: #f4f4f4;
+	padding:10px 27px;
+	position:relative;
+	-moz-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);
+	box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);
+	position:relative;
+	margin:20px 0;
+}
+.es-carousel{
+	overflow:hidden;
+}
+.es-carousel ul{
+	display:none;
+}
+.es-carousel ul li{
+	height:100%;
+	float:left;
+	display:block;
+}
+.es-carousel ul li a{
+	display:block;
+	opacity:0.8;
+	-webkit-touch-callout:none;
+	/* option */
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.es-carousel ul li.selected a{
+	border-color:#89bcb6;
+	opacity:1.0;
+}
+.es-carousel ul li a img{
+	display:block;
+	border:none;
+	max-height:100%;
+	max-width:100%;
+}
+.es-nav span{
+	position:absolute;
+	top: 10px;
+	left:8px;
+	background-color: #8bbdb7;
+	background-image: image-url('about-carousel-nav-arrows.png');
+	background-repeat: no-repeat;
+	background-position: 4px center;
+	width:14px;
+	height:47px;
+	text-indent:-9000px;
+	cursor:pointer;
+	opacity:0.8;
+}
+.es-nav span.es-nav-next{
+	right:8px;
+	left:auto;
+	background-position:-16px center;
+}
+.es-nav span:hover{
+	opacity:1.0;
+}

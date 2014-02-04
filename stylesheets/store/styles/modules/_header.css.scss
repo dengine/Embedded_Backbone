@@ -1,0 +1,198 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Example Module
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+#wrapper{
+	margin-bottom:0px;;
+}
+.has-dropdown{
+	position: relative;
+	&:hover .dropdown{
+		display: block
+	}
+}
+.dropdown{
+	display: none;
+	position: absolute;
+		top: 0px;
+		left: 0;
+	z-index: 100;
+	&.left{
+		left: auto;
+		right: 0
+	}
+	li{
+		border-top: 1px solid $grey;
+		width: 100%;
+	}
+}
+#nav-bar .has-dropdown:hover{
+	background-color: #fff;
+	color: $black;
+	@include border-top-right-radius(3px);
+	@include border-top-left-radius(3px);
+	& > a{
+		color: $black;
+		&:hover{
+			color: $pink;
+		}
+	}
+}
+
+#nav-bar .dropdown{
+	background: #fff;
+	min-width: 190px;
+	top: 42px;
+}
+
+.main-nav-bar{
+	width:524px;
+	height:77px;
+	background: image-url('pink-banner.png');
+	padding:21px 0 0 42px;
+	position: absolute;
+	bottom: -80px;
+	right: 0;
+	border:none;
+	margin:0px;
+}
+.navigation{
+	background: image-url('header-bg.png') top repeat-x ;
+	z-index: 99;
+	height: 79px;
+	.container{
+		z-index: 50;
+	}
+}
+#nav-bar{
+	float:right;
+}
+
+#nav-bar > li{
+	padding:10px 0px;
+	margin: 0px 5px;
+
+	&#link-to-cart {
+		background-image: image-url('cart-bag-small.png');
+		background-repeat: no-repeat;
+		background-position: left center;
+		padding: 10px 5px 10px 25px;
+	}
+	&#account-tab {
+		@include border-top-right-radius(3px);
+		@include border-top-left-radius(3px);
+		padding: 10px; 
+		& > a {
+			background-image: image-url('grey-point-down.png');
+			background-repeat: no-repeat;
+			background-position: right center;
+			padding-right: 15px;
+		}
+	}
+}
+#nav-bar > li > a{
+	font-family: 'Trocchi', serif;
+	color:#FFF;
+	text-transform:capitalize;
+	font-size:13.5px;
+
+	&:hover {
+		color: $pink;
+	}
+}
+.main-nav-bar > li > a{
+	font-family:$Din;
+	color:$black;
+	font-size:22px;
+	padding:6px 5px;
+	margin:3px;
+}
+.main-nav-bar > li:hover {
+	background-color:$white;
+	> a{
+		color:$pink;
+	}
+	@include border-radius(3px);
+}
+.main-nav-bar .current{
+	color: #fff;
+}
+#logo{
+	position: absolute;
+	display: block;
+}
+#logo img{
+	width:100%;
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+.dropdown-account {
+	@include border-top-right-radius(3px);
+	@include border-bottom-right-radius(3px);
+	@include border-bottom-left-radius(3px);
+	a {
+		color: $lightgrey;
+		display: block;
+		padding: 10px 10px;
+		width: 100%;
+
+		&:hover {
+			background-color: $black;
+			color: $white;
+		}
+
+	}
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+#nav-bar > li{
+	&#account-tab:hover {
+		& > a {
+			background-image: image-url('black-point-down.png')
+		}
+	}
+}
+// --------------------------------------
+//   Media Queries
+// --------------------------------------
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	#nav-bar a{
+		font-size:12px;
+	}
+	#nav-bar li {
+		margin: 0 2px;
+
+		& > a {
+			font-size: 11px;
+		}
+		&#account-tab {
+			padding: 10px 5px;
+		}
+	}
+	.navigation{
+		padding-bottom: 36px;
+	}
+	
+}
+@media only screen and (max-width: 767px) {
+
+	#top-nav-bar, #logo{
+		display:none;
+	}
+	.navigation{
+		height: 118px;
+	}
+
+}

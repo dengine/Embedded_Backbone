@@ -1,0 +1,81 @@
+// -------------------------------------
+//
+//   Example Module -
+//   Styles for the Ten Commandments Module
+//
+// -------------------------------------
+.ten-commandments {
+	background: pink;
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+.callbacks_nav{
+	position:absolute;
+	width:39px;
+	height:86px;
+	top:37%;
+	text-indent:-9999px;
+	z-index:3;
+}
+.callbacks_nav.next{
+	background: url(/assets/about-us/ten-commandments/right-btn.png);
+	right:0;
+}
+.callbacks_nav.prev{
+	background: url(/assets/about-us/ten-commandments/left-btn.png);
+	left:0;
+}
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+@media only screen and (max-width: 767px) {
+
+  .ten-commandments {
+    display:none;
+  }
+  
+
+}
